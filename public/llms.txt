@@ -1,0 +1,91 @@
+# VOSQ — Real Estate & Energy Intelligence Platform
+
+> Connecting Data. Powering Decisions.
+
+VOSQ is een Nederlands technologiebedrijf dat SaaS-applicaties ontwikkelt voor Real Estate & Energy Intelligence. De software verbindt vastgoed-, energie- en projectdata in één platform, waardoor vastgoedbeleggers, woningcorporaties, projectontwikkelaars en overheden complexe verkoop-, investerings- en ontwikkelbeslissingen kunnen onderbouwen met kwantitatieve analyses.
+
+## Kerngegevens Organisatie
+- Bedrijfsnaam: VOSQ B.V.
+- Type onderneming: B2B Software / SaaS / PropTech & EnergyTech
+- Hoofdpositionering: Real Estate & Energy Intelligence
+- Pay-off: Connecting Data. Powering Decisions.
+- Nederlandse merkbelofte: Van data naar strategie. Van inzicht naar resultaat.
+- Missie: Systeemoplossingen bieden waarmee vastgoed-, energie- en projectdata samenkomen om investerings- en exploitatiebeslissingen sneller en meetbaar te onderbouwen.
+- Merkwaarden (V-O-S-Q): Verbinden, Ordenen, Strategie, Quantificatie.
+- Doelmarkten: Nederland, Europa (utiliteitsbouw, woningbouw, logistiek vastgoed, energie-infrastructuur).
+
+## Productgroepen & Modules
+
+### 1. Vastgoedportefeuille & Objectbeheer
+- URL: https://vosq.nl/producten/vastgoedportefeuille-objectbeheer
+- Definitie: Een centraal objectregister en digitaal dossierbeheer voor vastgoedassets.
+- Kernmodules:
+  - Centraal Objectregister: Registratie van BAG-ID, kadastrale percelen, juridische entiteiten en oppervlaktes (BVO/VVO/GO).
+  - 10-Hoofdstukken Object Dossier: Gestructureerde dossiervorming van gebouwtechniek tot wettelijke naleving.
+  - Levenscyclus- & Exit-Workflow: Beheer van actieve, herontwikkelings- en verkoopdossiers.
+
+### 2. Energiemonitor & Kwartierdata Analyse
+- URL: https://vosq.nl/producten/energiemonitor-kwartierdata
+- Definitie: Software voor continue monitoring van kwartierwaarden, piekvermogens en netcongestierisico's.
+- Belangrijke begrippen:
+  - Netcongestie: Het moment waarop het elektriciteitsnet onvoldoende transportcapaciteit heeft voor de gevraagde of aangeboden hoeveelheid elektriciteit.
+  - Gecontracteerd Transportvermogen (GTV): Het contractueel vastgelegde maximumvermogen bij de netbeheerder. Overschrijding leidt tot piekboetes (€ 42,- per overschreden kW).
+- Kernmodules:
+  - P4 & Telemetrie Kwartierdata-Inlezer: 7-staps wizard voor data van Enexis, Liander, Stedin, Fudura en Kenter.
+  - Piek- & Vermogensbewaking: Automatische signalering bij het naderen van 90% van de GTV-contractgrens.
+  - Week-Heatmap & Baseload-Analyse: 24/7 matrix voor opsporing van sluipverbruik.
+  - Scenario-Simulator: Toetsing van EV-laadpleinen, warmtepompen, PV en BESS-batterijopslag.
+
+### 3. Energiecontract- & EAN-Management
+- URL: https://vosq.nl/producten/energiecontract-ean-management
+- Definitie: Centraal beheer van raamcontracten, individuele EAN-aansluitingen en hedgestrategieën voor multisite-portefeuilles.
+- Kernmodules:
+  - Drieniveau-Architectuur: L1 Raamcontracten, L2 Rechtspersonen/objecten, L3 EAN-aansluitingen.
+  - Multisite- & EAN-Register: Overzicht van aansluitingen voor elektriciteit, gas en stadswarmte.
+  - In- en Uitplug-Workflows: Beheer van contractmutaties bij aan- en verkoop.
+  - Hedge- & Risicobeheer: Inzicht in afdekkingsgraden (vast vs. klik vs. spot).
+
+### 4. Huurdersadministratie & Kostenallocatie
+- URL: https://vosq.nl/producten/huurdersadministratie-kostenallocatie
+- Definitie: Oplossing voor het reconciliëren van tussenmeters met hoofdmeters en het foutloos doorbelasten van energielasten en servicekosten aan huurders.
+- Kernmodules:
+  - Tussenmeter Reconciliatie: Aansluiting tussen netafname en som van tussenmeters.
+  - Algemene Voorzieningen: Toerekening van gemeenschappelijk verbruik (liften, HVAC) op basis van VVO verdeelsleutels.
+  - Data-Statuslabels: Expliciete status van data (gemeten, berekend, geschat, verdeeld).
+  - Huurcontract- & Indexatiebeheer: Beheer van ROZ-overeenkomsten en CPI-indexaties.
+
+### 5. Onderhoud, Keuringen & GACS Compliance
+- URL: https://vosq.nl/producten/onderhoud-keuringen-gacs
+- Definitie: Software voor bewaking van wettelijke inspectietermijnen, conditiemetingen en gebouwautomatiseringswetgeving (EPBD IV).
+- Kernmodules:
+  - Wettelijke Keuringen & Certificaten: SCIOS Scope 8, 10, 12 (PV), legionellapreventie, liftkeuringen en BMI/OAI.
+  - MJOP & NEN 2767 Conditiemeting: Integratie van conditiescores (1 t/m 6) en meerjarige CAPEX.
+  - EPBD IV & GACS Readiness: Compliance-toetsing voor utiliteit met installaties >290 kW en >70 kW.
+  - Leveranciersbeheer: Vastlegging van SLA's en onderhoudspartijen.
+
+### 6. Financiën, Exploitatie & ESG (CSRD)
+- URL: https://vosq.nl/producten/financien-exploitatie-esg
+- Definitie: Geïntegreerde berekening van Net Operating Income (NOI), bruto huurstromen, energielasten en Paris Proof indicatoren conform NTA 8800.
+- Kernmodules:
+  - Integrale Financiële Exploitatie: Realtime inzicht in contractuele huur minus OPEX en energiekosten.
+  - Duurzaamheids- & ESG-Monitor: Berekening van werkelijke kWh/m², CO2-reductie en Paris Proof status.
+  - Financiële Matrix per Pand: Overzicht van Netto Aanvangsrendement (NAR) en doorbelastingsgraad.
+  - Exportklare Dataroom: JSON- en Excel-exports voor ESG-jaarrekeningen en due diligence.
+
+## Sectoren
+1. Woningbouw (https://vosq.nl/sectoren/woningbouw)
+2. Commercieel vastgoed & investeringen (https://vosq.nl/sectoren/commercieel-vastgoed)
+3. Energie & netcongestie (https://vosq.nl/sectoren/energie-netcongestie)
+4. Batterijopslag & flexibiliteit (https://vosq.nl/sectoren/batterijopslag-flexibiliteit)
+5. Opwek & duurzame energie (https://vosq.nl/sectoren/duurzame-energie-opwek)
+6. Overheden & maatschappelijk (https://vosq.nl/sectoren/overheden-maatschappelijk)
+
+## Hoe VOSQ Werkt
+1. 01 Connect: verbind relevante databronnen, systemen en objectinformatie.
+2. 02 Structure: orden en valideer de gegevens in een uniform datamodel.
+3. 03 Analyse: wet- en regelgeving, energieprofielen en strategische scenario's doorrekenen.
+4. 04 Decide: onderbouw investerings- en exploitatiebeslissingen conform normen als GACS en NEN.
+
+## Contact & Demo
+- Vrijblijvende kennismaking & live demo: https://vosq.nl/demo-aanvragen
+- Website: https://vosq.nl

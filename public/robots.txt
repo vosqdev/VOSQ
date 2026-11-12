@@ -1,0 +1,35 @@
+# robots.txt for VOSQ - Real Estate & Energy Intelligence
+User-agent: *
+Allow: /
+
+# Explicit AI & Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Disallow transient paths
+Disallow: /api/
+Disallow: /_temp/
+
+# Sitemap location
+Sitemap: https://vosq.nl/sitemap.xml

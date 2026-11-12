@@ -1,0 +1,24 @@
+{
+  "name": "VOSQ Platform",
+  "short_name": "VOSQ",
+  "description": "Connecting Data. Powering Decisions. SaaS-platform voor Real Estate & Energy Intelligence.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d0f17",
+  "theme_color": "#0d0f17",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/aistudio/VOSQ-logo_met_neon_groene_Q-staart_17dbbc4f.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
