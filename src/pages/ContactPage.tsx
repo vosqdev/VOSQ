@@ -54,7 +54,7 @@ export function ContactPage() {
 
         <div className="relative z-10 max-w-3xl mx-auto">
           <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6">
-            Neem Contact op met VOSQ
+            Neem Contact op
           </h1>
 
           <p className="text-hero-sub text-lg sm:text-xl font-normal leading-relaxed opacity-90">
