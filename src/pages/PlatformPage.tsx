@@ -189,8 +189,12 @@ export function PlatformPage() {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-primary/10 blur-[160px] rounded-full pointer-events-none mix-blend-screen" />
 
         <div className="relative z-10 max-w-3xl mx-auto">
-          <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6">
-            Het VOSQ Intelligence Platform
+          <h1 className="flex justify-center mb-8">
+            <img
+              src="/assets/aistudio/VOSQ-logo_met_neon_groene_Q-staart_17dbbc4f.png"
+              alt="VOSQ"
+              className="h-14 sm:h-20 w-auto object-contain drop-shadow-[0_0_30px_rgba(121,242,194,0.3)]"
+            />
           </h1>
 
           <p className="text-hero-sub text-lg sm:text-xl font-medium leading-relaxed opacity-90 mb-8">
