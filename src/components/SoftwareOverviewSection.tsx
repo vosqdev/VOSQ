@@ -28,7 +28,7 @@ const SIX_MODULES: ModuleItem[] = [
   {
     id: 'vastgoed-objectdossier',
     numberTitle: '1. Vastgoed- & Objectdossier',
-    description: 'Compleet vastgoedregister inclusief oppervlaktes (BVO/VVO), WOZ-beschikkingen, kadastrale percelen, energielabels en splitsingsaktes.',
+    description: 'Brengt BVO/VVO, WOZ, kadastrale percelen en energielabels samen. Zo ontstaat één gevalideerd objectdossier voor waardebehoud en portefeuilleregie.',
     slug: 'vastgoedportefeuille-objectbeheer',
     badgeStyle: 'bg-sky-500/15 border-sky-500/25 text-sky-400',
     linkStyle: 'text-sky-400 hover:text-sky-300',
@@ -37,7 +37,7 @@ const SIX_MODULES: ModuleItem[] = [
   {
     id: 'energiemonitor-netcongestie',
     numberTitle: '2. Energiemonitor & Netcongestie',
-    description: 'Telemetrie-koppeling met kwartierdata. Automatische piekdetectie, peak shaving simulatie en beheer van industriële batterijopslag (BESS).',
+    description: 'Analyseert kwartierdata, piekbelasting en batterijopslag (BESS). Helpt u netcongestie beheersen en gecontracteerd vermogen slimmer te benutten.',
     slug: 'energiemonitor-kwartierdata',
     badgeStyle: 'bg-amber-500/15 border-amber-500/25 text-amber-400',
     linkStyle: 'text-amber-400 hover:text-amber-300',
@@ -46,7 +46,7 @@ const SIX_MODULES: ModuleItem[] = [
   {
     id: 'centraal-contractenbeheer',
     numberTitle: '3. Centraal Contractenbeheer (L1/L2/L3)',
-    description: 'Voorkom vendor lock-ins. Raamovereenkomsten op portfolio-niveau gekoppeld aan deelcontracten en individuele EAN-aansluitingen.',
+    description: 'Koppelt raamovereenkomsten aan deelcontracten en individuele EAN-aansluitingen. Voorkomt onnodige stilzwijgende verlenging en geeft grip op inkooprisico.',
     slug: 'energiecontract-ean-management',
     badgeStyle: 'bg-indigo-500/15 border-indigo-500/25 text-indigo-400',
     linkStyle: 'text-indigo-400 hover:text-indigo-300',
@@ -55,7 +55,7 @@ const SIX_MODULES: ModuleItem[] = [
   {
     id: 'onderhoud-scios-keuringen',
     numberTitle: '4. Onderhoud, SCIOS & Keuringen',
-    description: 'Borging van brandverzekeringspolissen (SCIOS Scope 8/10), EPBD IV keuringsplicht en conditiemeting volgens NEN 2767.',
+    description: 'Bewaakt SCIOS Scope 8/10/12, EPBD IV-verplichtingen en NEN 2767-conditiemetingen. Ondersteunt continuïteit, verzekerbaarheid en meerjarig onderhoud.',
     slug: 'onderhoud-keuringen-gacs',
     badgeStyle: 'bg-emerald-500/15 border-emerald-500/25 text-emerald-400',
     linkStyle: 'text-emerald-400 hover:text-emerald-300',
@@ -64,7 +64,7 @@ const SIX_MODULES: ModuleItem[] = [
   {
     id: 'huurders-servicekosten',
     numberTitle: '5. Huurders & Servicekosten',
-    description: 'Los de split-incentive op. Sluitende afrekeningen van nutsvoorzieningen per huurder en m², met minimale leegstandslekkage.',
+    description: 'Rekent hoofd- en tussenmeters transparant af per huurder en vierkante meter. Vermindert niet-verhaalbare energielasten in de exploitatie.',
     slug: 'huurdersadministratie-kostenallocatie',
     badgeStyle: 'bg-purple-500/15 border-purple-500/25 text-purple-400',
     linkStyle: 'text-purple-400 hover:text-purple-300',
@@ -73,7 +73,7 @@ const SIX_MODULES: ModuleItem[] = [
   {
     id: 'exit-desinvesteringsworkflow',
     numberTitle: '6. Exit- & Desinvesteringsworkflow',
-    description: 'Maak een asset binnen 24 uur verkoopklaar. Directe ontkoppeling van EAN-codes en export van een waterdicht vendor due diligence dossier.',
+    description: 'Bereidt een object gestructureerd voor op verkoop of herfinanciering met tijdige EAN-ontkoppeling en een overzichtelijk due diligence dossier.',
     slug: 'financien-exploitatie-esg',
     badgeStyle: 'bg-rose-500/15 border-rose-500/25 text-rose-400',
     linkStyle: 'text-rose-400 hover:text-rose-300',

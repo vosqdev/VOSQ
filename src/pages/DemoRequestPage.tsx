@@ -112,7 +112,7 @@ export function DemoRequestPage() {
         </h1>
 
         <p className="text-hero-sub text-lg sm:text-xl font-normal leading-relaxed opacity-90 max-w-3xl mx-auto mb-8">
-          Zie hoe het platform jouw vastgoedobject en energieaansluiting contracten en vraagstukken structureert en registreert.
+          Ontdek hoe VOSQ uw vastgoed, energieaansluiting, contracten en investeringsvraagstukken overzichtelijk structureert en doorrekent.
         </p>
 
         {/* Tab Toggle: Kennismaking / Demo */}
@@ -155,14 +155,14 @@ export function DemoRequestPage() {
                 Aanvraag Succesvol Ontvangen
               </h2>
               <p className="text-hero-sub text-base max-w-lg mb-8 leading-relaxed">
-                Bedankt <strong className="text-white">{name}</strong> van <strong className="text-white">{organization}</strong>. Wij hebben jouw aanvraag voor een <strong className="text-white">{requestType === 'meeting' ? 'vrijblijvende kennismaking' : 'live demonstratie'}</strong> geregistreerd.
+                Bedankt <strong className="text-white">{name}</strong> van <strong className="text-white">{organization}</strong>. Wij hebben uw aanvraag voor een <strong className="text-white">{requestType === 'meeting' ? 'vrijblijvende kennismaking' : 'live demonstratie'}</strong> geregistreerd.
               </p>
               <div className="p-5 rounded-2xl bg-white/5 border border-white/5 text-xs text-muted-foreground max-w-md w-full text-left space-y-1.5 mb-8">
                 <div>• Type: <strong className="text-white">{requestType === 'meeting' ? 'Vrijblijvende Kennismaking' : 'Live Demonstratie (30 min)'}</strong></div>
                 <div>• E-mail: <strong className="text-white">{email}</strong></div>
                 <div>• Vraagstuk: <strong className="text-white">{interestArea}</strong></div>
                 <div>• Sector: <strong className="text-white">{sector}</strong></div>
-                <div className="text-primary pt-1 font-semibold">Verwachte reactietijd: Binnen 24 uur nemen we contact op.</div>
+                <div className="text-primary pt-1 font-semibold">We nemen spoedig contact met u op om een moment af te stemmen.</div>
               </div>
               <Button variant="hero" onClick={() => setSubmitted(false)}>
                 Nieuwe aanvraag indienen
@@ -198,7 +198,7 @@ export function DemoRequestPage() {
                   {requestType === 'meeting' ? 'Plan een Vrijblijvende Kennismaking' : 'Vraag een Live Demonstratie Aan'}
                 </h2>
                 <p className="text-xs sm:text-sm text-muted-foreground mt-1.5 leading-relaxed">
-                  Zie hoe het platform jouw vastgoedobject en energieaansluiting contracten en vraagstukken structureert en registreert.
+                  Ontdek hoe het platform uw vastgoed, energieaansluiting en vraagstukken overzichtelijk structureert en analyseert.
                 </p>
               </div>
 
@@ -350,7 +350,7 @@ export function DemoRequestPage() {
               {/* Bericht */}
               <div>
                 <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1.5">
-                  Toelichting op jouw vastgoed- of energievraagstuk (Optioneel)
+                  Toelichting op uw vastgoed- of energievraagstuk (Optioneel)
                 </label>
                 <textarea
                   id="message"
@@ -404,7 +404,7 @@ export function DemoRequestPage() {
                 </span>
                 <span className="flex items-center gap-1.5">
                   <Clock className="w-3.5 h-3.5 text-primary" />
-                  Reactie &lt; 24 uur
+                  Persoonlijke reactie
                 </span>
                 <span className="flex items-center gap-1.5">
                   <Lock className="w-3.5 h-3.5 text-primary" />

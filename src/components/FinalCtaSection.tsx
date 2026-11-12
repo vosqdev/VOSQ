@@ -42,7 +42,7 @@ export function FinalCtaSection() {
           </h2>
 
           <p className="text-hero-sub text-lg sm:text-xl font-normal max-w-3xl mx-auto opacity-90 leading-relaxed mb-10">
-            Zie hoe het platform jouw vastgoedobject en energieaansluiting contracten en vraagstukken structureert en registreert.
+            Ontdek hoe VOSQ uw vastgoed, energieaansluiting, contracten en investeringsvraagstukken overzichtelijk structureert en doorrekent.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">

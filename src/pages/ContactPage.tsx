@@ -58,24 +58,24 @@ export function ContactPage() {
           </h1>
 
           <p className="text-hero-sub text-lg sm:text-xl font-normal leading-relaxed opacity-90">
-            Zie hoe het platform jouw vastgoedobject en energieaansluiting contracten en vraagstukken structureert en registreert.
+            Ontdek hoe VOSQ uw vastgoed, energieaansluiting, contracten en investeringsvraagstukken overzichtelijk structureert en doorrekent.
           </p>
         </div>
       </section>
 
       <section className="px-4 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-12 items-start">
-          {/* Left Column: 100% Applicatie — Geen Consultancy */}
+          {/* Left Column: Digitaal Instrument — Zelfstandig Regie */}
           <div className="lg:col-span-5 space-y-6">
             <div className="liquid-glass rounded-3xl p-8 sm:p-10 border border-primary/25 bg-gradient-to-b from-primary/[0.08] via-white/[0.02] to-transparent shadow-xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-xs font-mono font-bold text-primary uppercase tracking-wider mb-6">
-                Onze Positie
+                Positionering
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 tracking-tight leading-snug">
-                100% Applicatie — Geen Consultancy
+                Praktisch Instrument — Zelfstandig Regie
               </h2>
               <p className="text-hero-sub text-base sm:text-lg leading-relaxed opacity-90 text-white/90">
-                Wij positioneren ons bewust niet als adviesbureau of consultancy. Wij leveren overzicht en de mogelijkheid voor doorlopende datakoppelingen waarmee organisaties zélf de regie voeren.
+                VOSQ is een digitaal platform en geen traditioneel adviesbureau. U krijgt overzicht en gestructureerde datakoppelingen om zelfstandig kansen, risico's en scenario's te verkennen.
               </p>
             </div>
           </div>
@@ -90,7 +90,7 @@ export function ContactPage() {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">Aanvraag Verzonden</h3>
                   <p className="text-muted-foreground text-sm max-w-md mb-8">
-                    Bedankt {name}. We nemen zo snel mogelijk contact met je op via <span className="text-primary font-medium">{email}</span> om de afspraak in te plannen.
+                    Bedankt {name}. We nemen zo spoedig mogelijk contact met u op via <span className="text-primary font-medium">{email}</span> om uw vraag te bespreken.
                   </p>
                   <Button variant="hero" onClick={() => setSubmitted(false)}>
                     Nieuw bericht sturen
@@ -119,7 +119,7 @@ export function ContactPage() {
                   <div className="border-b border-white/10 pb-4 mb-2">
                     <h3 className="text-2xl font-bold text-white mb-1.5">Plan een Vrijblijvende Kennismaking</h3>
                     <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                      Zie hoe het platform jouw vastgoedobject en energieaansluiting contracten en vraagstukken structureert en registreert.
+                      Ontdek hoe VOSQ uw vastgoed, energieaansluiting en contracten overzichtelijk structureert en inzichtelijk maakt.
                     </p>
                   </div>
 
@@ -201,13 +201,13 @@ export function ContactPage() {
 
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1.5">
-                      Bericht of Toelichting op je vraagstuk (Optioneel)
+                      Bericht of Toelichting op uw vraagstuk (Optioneel)
                     </label>
                     <textarea
                       rows={4}
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
-                      placeholder="Vertel ons over jouw project, netaansluiting of portefeuille..."
+                      placeholder="Vertel ons over uw project, netaansluiting of portefeuille..."
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/50 transition-colors resize-none"
                     />
                   </div>

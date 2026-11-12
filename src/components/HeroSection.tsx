@@ -40,16 +40,16 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center flex-grow w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-6">
-        {/* H1 in twee regels: Verbinding tussen (wit) en Vastgoed en Energie. (lime) */}
+        {/* H1 met centrale waardepropositie */}
         <motion.h1 
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease, delay: 0.25 }}
           className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.08] tracking-tighter max-w-5xl"
         >
-          <span className="text-white drop-shadow-sm">Verbinding tussen</span><br />
+          <span className="text-white drop-shadow-sm">Meer inzicht. Betere beslissingen.</span><br />
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary/95 to-primary/70 drop-shadow-[0_0_35px_rgba(121,242,194,0.35)]">
-            Vastgoed en Energie.
+            Hoger rendement.
           </span>
         </motion.h1>
 
@@ -60,7 +60,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, ease, delay: 0.35 }}
           className="text-hero-sub text-lg sm:text-xl max-w-3xl mt-6 opacity-90 font-medium leading-relaxed"
         >
-          De wereld verandert. Energie wordt bepalend. Vastgoed moet mee. Wij brengen alles samen in één platform en maken de toekomst inzichtelijk.
+          VOSQ helpt vastgoedeigenaren, beleggers en ondernemers om de financiële, technische en energetische prestaties van hun vastgoed te verbeteren. Van energiekosten en netcapaciteit tot verduurzaming, investeringsscenario's en toekomstwaarde.
         </motion.p>
 
         {/* CTA Knoppen: Primair (lime, gevuld) & Secundair (omlijnd) */}
@@ -70,13 +70,13 @@ export function HeroSection() {
           transition={{ duration: 0.8, ease, delay: 0.45 }}
           className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mt-10 w-full sm:w-auto"
         >
-          <Link to="/contact" className="w-full sm:w-auto">
+          <Link to="/demo-aanvragen" className="w-full sm:w-auto">
             <Button 
               variant="hero" 
               className="w-full sm:w-auto h-14 px-8 text-base font-bold shadow-[0_0_30px_rgba(121,242,194,0.3)] hover:shadow-[0_0_45px_rgba(121,242,194,0.5)] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
             >
               <Sparkles className="w-4 h-4 mr-2" />
-              Vraag een demo aan
+              Ontdek uw vastgoedkansen
             </Button>
           </Link>
 
@@ -85,7 +85,7 @@ export function HeroSection() {
               variant="heroSecondary" 
               className="w-full sm:w-auto h-14 px-8 text-base border border-white/10 hover:bg-white/10 hover:-translate-y-0.5 transition-all duration-300"
             >
-              Ontdek de oplossingen
+              Bekijk de mogelijkheden
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </Link>
@@ -103,8 +103,8 @@ export function HeroSection() {
               <Zap className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-xs font-bold text-white uppercase tracking-wider">Netcongestie</div>
-              <div className="text-[11px] text-muted-foreground">CBC & ATO simulaties</div>
+              <div className="text-xs font-bold text-white uppercase tracking-wider">Energie & Netcapaciteit</div>
+              <div className="text-[11px] text-muted-foreground">CBC, GTV & peak shaving</div>
             </div>
           </div>
 
@@ -113,8 +113,8 @@ export function HeroSection() {
               <Building2 className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-xs font-bold text-white uppercase tracking-wider">Vastgoed & ESG</div>
-              <div className="text-[11px] text-muted-foreground">Paris Proof & CSRD</div>
+              <div className="text-xs font-bold text-white uppercase tracking-wider">Vastgoed & Waarde</div>
+              <div className="text-[11px] text-muted-foreground">Paris Proof, CSRD & MJOP</div>
             </div>
           </div>
 
@@ -133,8 +133,8 @@ export function HeroSection() {
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-xs font-bold text-white uppercase tracking-wider">100% Software</div>
-              <div className="text-[11px] text-muted-foreground">Geen consultancy uurtje-factuurtje</div>
+              <div className="text-xs font-bold text-white uppercase tracking-wider">Praktisch Instrument</div>
+              <div className="text-[11px] text-muted-foreground">Zelfstandig inzicht & analyse</div>
             </div>
           </div>
         </motion.div>

@@ -56,7 +56,7 @@ export const SECTORS: SectorData[] = [
       'aansluiting gecontracteerd vermogen woonwijk'
     ],
     definition: 'Gebiedsontwikkeling software voor woningbouw is een digitaal platform dat ruimtelijke plannen, grondexploitaties en gelijktijdige energievraag (warmtepompen, PV en laadinfrastructuur) berekent tegen de beschikbare netcapaciteit.',
-    summary: 'Woningbouwprojecten lopen steeds vaker vast op netcongestie en onzekerheid over energie-infrastructuur. VOSQ levert de SaaS-applicatie om al in de haalbaarheidsfase netcapaciteit, energieprofielen en vastgoedrendementen integraal door te rekenen.',
+    summary: 'Woningbouwprojecten lopen steeds vaker vast op netcongestie en onzekerheid over energie-infrastructuur. VOSQ biedt het digitale platform om al in de haalbaarheidsfase netcapaciteit, energieprofielen en vastgoedrendementen integraal door te rekenen.',
     challenges: [
       {
         title: 'Netcongestie bij projectontwikkeling',
@@ -92,14 +92,14 @@ export const SECTORS: SectorData[] = [
       }
     ],
     metrics: [
-      { label: 'Indicatieve tijdwinst haalbaarheidsfase', value: '[Doorlooptijd -50%]' },
-      { label: 'Besparing op netverzwaringskosten', value: '[CAPEX Reductie]' },
-      { label: 'Validatietijd energieconcept', value: '< 48 uur' }
+      { label: 'Focus haalbaarheidsfase', value: 'Snellere verkenning' },
+      { label: 'Netinvestering', value: 'CAPEX-inzicht' },
+      { label: 'Validatie energieconcept', value: 'Datagedreven' }
     ],
     faqs: [
       {
         question: 'Hoe helpt VOSQ bij netcongestie in nieuwbouwwijken?',
-        answer: 'VOSQ simuleert het gecombineerde gelijktijdige verbruiksprofiel van warmtepompen, inductiekoken en laadpalen, waardoor ontwikkelaars met peak-shaving en batterijen kunnen aantonen dat een kleinere netaansluiting volstaat.'
+        answer: 'VOSQ simuleert het gecombineerde gelijktijdige verbruiksprofiel van warmtepompen, inductiekoken en laadpalen, waardoor ontwikkelaars met peak-shaving en batterijen kunnen onderzoeken hoe een compactere netaansluiting past.'
       },
       {
         question: 'Kan VOSQ gekoppeld worden aan GIS- en CAD-bestanden?',
@@ -108,10 +108,10 @@ export const SECTORS: SectorData[] = [
     ],
     useCase: {
       title: 'Voorbeeldcase: Gebiedsontwikkeling Woonwijk met Netbeperking',
-      clientType: '[Projectontwikkelaar / Woningcorporatie]',
+      clientType: 'Projectontwikkelaar / Woningcorporatie (illustratief)',
       situation: 'Bij een voorgenomen woonwijkontwikkeling gaf de regionale netbeheerder aan dat de gewenste transportcapaciteit pas na enkele jaren beschikbaar zou zijn.',
       solution: 'Met het VOSQ-platform werd een lokaal energy hub scenario gemodelleerd met een collectief batterijsysteem en gestuurde laadpalen.',
-      result: 'Het geoptimaliseerde aansluitprofiel voldeed aan de netbeheerdersvoorwaarden, waardoor de planontwikkeling zonder meerjarige vertraging kon worden voortgezet.'
+      result: 'Het geoptimaliseerde aansluitprofiel bood concrete onderbouwing voor het vervolgoverleg met de netbeheerder.'
     }
   },
   {
@@ -167,26 +167,26 @@ export const SECTORS: SectorData[] = [
       }
     ],
     metrics: [
-      { label: 'Vermindering van piekbelasting', value: '[Gemonitorde Reductie]' },
-      { label: 'Geregistreerd portefeuilleoppervlak', value: '[Portefeuille m²]' },
-      { label: 'Besparing op contractuele netkosten', value: '[Kostenoptimalisatie]' }
+      { label: 'Piekbelasting', value: 'Actieve monitoring' },
+      { label: 'Portefeuille-overzicht', value: 'Uniform op m²' },
+      { label: 'Contractuele netkosten', value: 'Scenariovergelijking' }
     ],
     faqs: [
       {
         question: 'Wat is de relatie tussen netcongestie en vastgoedwaardering?',
-        answer: 'Vastgoed zonder voldoende gecontracteerd vermogen kan huurders met elektrificatiebehoeften (zoals e-trucks) niet bedienen, wat leidt tot waardedaling en langere leegstand.'
+        answer: 'Vastgoed zonder voldoende gecontracteerd vermogen kan huurders met elektrificatiebehoeften (zoals e-trucks) moeilijker bedienen, wat impact kan hebben op verhuurbaarheid en waardeontwikkeling.'
       },
       {
         question: 'Hoe helpt VOSQ bij CSRD Scope 3 emissies van huurders?',
-        answer: 'VOSQ structureert tussenmeters en submetering conform de EU-taxonomie, zodat huurdersverbruik automatisch en controleerbaar wordt geconsolideerd.'
+        answer: 'VOSQ structureert tussenmeters en submetering conform gangbare rapportagestandaarden, zodat huurdersverbruik overzichtelijk en controleerbaar wordt geconsolideerd.'
       }
     ],
     useCase: {
       title: 'Voorbeeldcase: Logistiek Centrum met E-Truck Elektrificatiebehoefte',
-      clientType: '[Logistiek Vastgoedfonds / Assetmanager]',
+      clientType: 'Logistiek Vastgoedfonds / Assetmanager (illustratief)',
       situation: 'Een hoofdhuurder wilde een wagenpark elektrificeren met snelladers, terwijl de netbeheerder een wachttijd aangaf voor netverzwaring.',
-      solution: 'VOSQ modelleerde een combinatie van dakgebonden PV, batterijopslag en een dynamisch laadbeheersysteem (EMS).',
-      result: 'Het pand kon binnen de bestaande aansluiting opereren en de huurovereenkomst werd langjarig verlengd.'
+      solution: 'VOSQ modelleerde scenario\'s met dakgebonden PV, batterijopslag en een dynamisch laadbeheersysteem (EMS).',
+      result: 'Het scenario gaf helder inzicht in benodigde investeringen en capaciteitsbenutting binnen de bestaande aansluiting.'
     }
   },
   {
@@ -242,9 +242,9 @@ export const SECTORS: SectorData[] = [
       }
     ],
     metrics: [
-      { label: 'Nauwkeurigheid congestiemodel', value: '[Modelprecisie]' },
-      { label: 'Gemonitorde transformatorstations', value: '[Aantal Stations]' },
-      { label: 'Gerealiseerde vermogensoptimalisatie', value: '[Capaciteitswinst]' }
+      { label: 'Congestie-analyse', value: 'Op kwartierbasis' },
+      { label: 'Netstations & aansluitingen', value: 'Centraal inzicht' },
+      { label: 'Vermogensbenutting', value: 'Scenarioverkenning' }
     ],
     faqs: [
       {
@@ -253,15 +253,15 @@ export const SECTORS: SectorData[] = [
       },
       {
         question: 'Hoe voorspelt VOSQ congestiemomenten?',
-        answer: 'VOSQ combineert historische kwartierdata, weersvoorspellingen en regionale netbelastingsindices om pieken tijdig te signaleren en flexibiliteit in te schakelen.'
+        answer: 'VOSQ combineert historische kwartierdata, weerprofielen en regionale netbelastingsindices om pieken tijdig te signaleren en flexibiliteitsopties door te rekenen.'
       }
     ],
     useCase: {
       title: 'Voorbeeldcase: Collectieve Energiehub op Bedrijventerrein',
-      clientType: '[Ondernemersvereniging / Bedrijventerrein]',
+      clientType: 'Ondernemersvereniging / Bedrijventerrein (illustratief)',
       situation: 'Meerdere bedrijven op hetzelfde industrieterrein kregen te maken met een transportstop voor afname, waardoor bedrijfsuitbreidingen stagneerden.',
       solution: 'VOSQ bracht alle kwartierprofielen samen in een virtueel energiehub-model om gelijktijdigheidsvoordelen te kwantificeren.',
-      result: 'Door onderlinge verrekening en piekverschuiving kon de collectieve aansluiting optimaal worden benut binnen de bestaande vergunning.'
+      result: 'De analyse maakte onderlinge verrekening en piekverschuiving binnen de collectieve aansluiting inzichtelijk.'
     }
   },
   {
@@ -290,7 +290,7 @@ export const SECTORS: SectorData[] = [
       },
       {
         title: 'Onzekere koppeling met vastgoed en laadpleinen',
-        description: 'Hoe dimensioneer je een batterij voor een laadplein zonder dat het net overbelast raakt?',
+        description: 'Hoe dimensioneert u een batterij voor een laadplein zonder dat het net overbelast raakt?',
         impact: 'Overdimensionering (onnodig hoge CAPEX) of stroomuitval bij piekuren.'
       },
       {
@@ -303,28 +303,28 @@ export const SECTORS: SectorData[] = [
       {
         title: 'BESS Multi-Market Financial Model',
         description: 'Simuleert kwartierwaarden over 15 jaar inclusief batterijdegradatie, rente en marktontwikkelingen.',
-        kpi: 'Bankable businesscase rapportage'
+        kpi: 'Gestructureerde businesscase'
       },
       {
         title: 'EV Charging Hub Sizer',
-        description: 'Berekent de exacte capaciteit van laadpalen, PV en batterijopslag op basis van voertuigprofielen.',
-        kpi: 'Optimale netaansluitingsdimensionering'
+        description: 'Berekent de benodigde capaciteit van laadpalen, PV en batterijopslag op basis van voertuigprofielen.',
+        kpi: 'Onderbouwde netdimensionering'
       },
       {
         title: 'EMS Strategy Simulator',
         description: 'Toetst verschillende sturingsalgoritmes (peak shaving vs. dynamische tariefarbitrage) vooraf aan de praktijk.',
-        kpi: 'Maximalisatie van batterijrendement'
+        kpi: 'Vergelijking van sturingsstrategieën'
       }
     ],
     metrics: [
-      { label: 'Gemodelleerde BESS capaciteit', value: '[Capaciteit MWh]' },
-      { label: 'Betrouwbaarheid van projecties', value: '[Modelvalidatie]' },
-      { label: 'Terugverdientijd optimalisatie', value: '[Gereduceerde TVT]' }
+      { label: 'BESS-scenario\'s', value: 'Multi-market' },
+      { label: 'Modelbasis', value: 'Kwartierdata' },
+      { label: 'Investeringsinzicht', value: 'Terugverdientijd & risico' }
     ],
     faqs: [
       {
         question: 'Wat is een BESS en waarom is softwarematige simulatie noodzakelijk?',
-        answer: 'Een BESS (Battery Energy Storage System) slaat overtollige zonne-energie op of laadt op tijdens lage stroomprijzen. Omdat batterijprijzen en elektriciteitsmarkten fluctueren, is simulatie van degradatie en inkomsten cruciaal voor financierbaarheid.'
+        answer: 'Een BESS (Battery Energy Storage System) slaat overtollige zonne-energie op of laadt op tijdens lage stroomprijzen. Omdat batterijprijzen en elektriciteitsmarkten fluctueren, is simulatie van degradatie en opbrengstscenario\'s waardevol ter voorbereiding op besluitvorming.'
       },
       {
         question: 'Wat is het verschil tussen peak shaving en energie-arbitrage?',
@@ -333,10 +333,10 @@ export const SECTORS: SectorData[] = [
     ],
     useCase: {
       title: 'Voorbeeldcase: BESS Investeringsvalidatie voor Logistiek Knooppunt',
-      clientType: '[Investeringsfonds / Ontwikkelaar]',
+      clientType: 'Investeringsfonds / Ontwikkelaar (illustratief)',
       situation: 'Een ontwikkelaar wilde de haalbaarheid onderzoeken van een grootschalig batterijsysteem in combinatie met een snellaadplein voor vrachtwagens.',
       solution: 'VOSQ simuleerde 8 kwartierscenario\'s over 15 jaar, rekening houdend met batterijveroudering en dynamische markttarieven.',
-      result: 'Het resulterende investeringsmemorandum voldeed aan de bancaire eisen voor projectfinanciering.'
+      result: 'De scenariovergelijking bood een heldere kwantitatieve basis voor verdere financiële toetsing.'
     }
   },
   {
@@ -392,9 +392,9 @@ export const SECTORS: SectorData[] = [
       }
     ],
     metrics: [
-      { label: 'Gemonitorde duurzame opwekcapaciteit', value: '[Gemonitord MWp]' },
-      { label: 'Voorkomen verlies door slimme sturing', value: '[Beperkt Verlies]' },
-      { label: 'Verhoging benutting aansluiting', value: '[Benuttingsfactor]' }
+      { label: 'Opwekanalyse', value: 'PV, wind & smart grid' },
+      { label: 'Curtailment-effect', value: 'Kwartierinzicht' },
+      { label: 'Aansluitbenutting', value: 'Cable pooling model' }
     ],
     faqs: [
       {
@@ -403,15 +403,15 @@ export const SECTORS: SectorData[] = [
       },
       {
         question: 'Hoe werkt cable pooling in VOSQ?',
-        answer: 'Cable pooling combineert opwekbronnen met verschillende piekuren (bijv. zon overdag en wind \'s nachts) op dezelfde fysieke kabel. VOSQ simuleert de overschrijdingskansen en berekent de optimale verhouding.'
+        answer: 'Cable pooling combineert opwekbronnen met verschillende piekuren (bijv. zon overdag en wind \'s nachts) op dezelfde fysieke kabel. VOSQ simuleert de overschrijdingskansen en verkent de optimale verhouding.'
       }
     ],
     useCase: {
       title: 'Voorbeeldcase: Zon-op-Dak met Directe Levering aan Huurders',
-      clientType: '[Zonne-energie ontwikkelaar / Gebouweigenaar]',
+      clientType: 'Zonne-energie ontwikkelaar / Gebouweigenaar (illustratief)',
       situation: 'Een grootschalig zonne-energiesysteem op een distributiecentrum liep het risico op terugleverbeperkingen door netcongestie.',
       solution: 'VOSQ modelleerde een lokale koppeling met de energiebehoefte van de zittende huurders en een peak-shaving batterijsysteem.',
-      result: 'Het overgrote deel van de opgewekte stroom werd lokaal afgezet tegen gunstige tarieven voor zowel verhuurder als huurder.'
+      result: 'Het model bracht de lokale afzetmogelijkheden en financiële effecten voor verhuurder en huurder helder in kaart.'
     }
   },
   {
@@ -467,14 +467,14 @@ export const SECTORS: SectorData[] = [
       }
     ],
     metrics: [
-      { label: 'Ondersteunde gebiedsontwikkelingen', value: '[Projecten]' },
-      { label: 'Geregistreerde publieke vastgoedobjecten', value: '[Gebouwen]' },
-      { label: 'Versnelling van beleidsafstemming', value: '[Doorlooptijd]' }
+      { label: 'Gebiedsregie', value: 'Ruimte & energie' },
+      { label: 'Vastgoedportefeuille', value: 'Centraal dossier' },
+      { label: 'Beleidsafstemming', value: 'Datagedreven' }
     ],
     faqs: [
       {
         question: 'Hoe helpt VOSQ gemeenten in de afstemming met netbeheerders?',
-        answer: 'VOSQ levert gevalideerde kwartierprofielen en ruimtelijke data die netbeheerders direct kunnen inlezen, waardoor overleg plaatsvindt op basis van feiten in plaats van aannames.'
+        answer: 'VOSQ levert gestructureerde kwartierprofielen en ruimtelijke data die als gezamenlijk vertrekpunt dienen, waardoor overleg plaatsvindt op basis van feiten.'
       },
       {
         question: 'Is VOSQ compatibel met gemeentelijke standaarden?',
@@ -483,10 +483,10 @@ export const SECTORS: SectorData[] = [
     ],
     useCase: {
       title: 'Voorbeeldcase: Regionale Energie- en Ruimtelijke Planning',
-      clientType: '[Gemeente / Regionale Energie Regie]',
+      clientType: 'Gemeente / Regionale Energie Regie (illustratief)',
       situation: 'Een overheidsinstantie zocht een eenduidige methode om prioriteit toe te kennen aan nieuwbouwlocaties rekening houdend met netcapaciteit en warmtevisies.',
       solution: 'VOSQ bracht alle ruimtelijke plannen en netcongestiekaarten samen in een integraal scenariomodel.',
-      result: 'Een feitelijk onderbouwd investeringsplan waarmee afstemming met netbeheerder en gemeenteraad constructief kon worden afgerond.'
+      result: 'Het overzicht ondersteunde een feitelijk onderbouwd vervolgoverleg tussen netbeheerder en gemeenteraad.'
     }
   }
 ];

@@ -121,7 +121,7 @@ const PLATFORM_SCREENS: PlatformScreen[] = [
       { label: 'Actieve Alerts', value: '5 meldingen' },
       { label: 'Piekvermogen Alert', value: '+14% detectie' },
       { label: 'Subsidie Alert', value: 'ISDE/DUMAVA' },
-      { label: 'Due Diligence Dossier', value: '< 24u gereed' }
+      { label: 'Due Diligence Dossier', value: 'Direct exporteerbaar' }
     ]
   },
   {
@@ -198,13 +198,13 @@ export function PlatformPage() {
           </h1>
 
           <p className="text-hero-sub text-lg sm:text-xl font-medium leading-relaxed opacity-90 mb-8">
-            Een modern cloud-dashboard ontworpen voor vastgoed- en energiedata. Overzichtelijk, schaalbaar en realtime.
+            Een praktisch digitaal platform voor vastgoed- en energiedata. Overzichtelijk, schaalbaar en gebouwd voor onderbouwde besluitvorming.
           </p>
 
           {/* Core punchline */}
           <div className="text-2xl sm:text-4xl font-extrabold tracking-tight">
-            <span className="text-white">Monitor je vastgoed. </span>
-            <span className="text-primary drop-shadow-[0_0_25px_rgba(121,242,194,0.35)]">Onderzoek je energie.</span>
+            <span className="text-white">Monitor uw vastgoed. </span>
+            <span className="text-primary drop-shadow-[0_0_25px_rgba(121,242,194,0.35)]">Onderzoek uw energie.</span>
           </div>
         </div>
       </section>
@@ -221,11 +221,11 @@ export function PlatformPage() {
               </div>
 
               <h2 className="text-2xl sm:text-4xl font-bold text-white mb-4 tracking-tight">
-                Jouw vastgoed en energie in beeld, in één dashboard.
+                Uw vastgoed en energie in beeld, in één dashboard.
               </h2>
 
               <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-6 font-normal">
-                Vergelijk vastgoedexploitatie, huurstromen, energiekosten en vergoedingen. Volg controles, inspecties, kwartierdata en netfrequentie. In het portal combineren we visualisaties in dashboards met eigen vastgoedobjecten en pas je energieprofielen en installaties aan.
+                Vergelijk vastgoedexploitatie, huurstromen, energiekosten en vergoedingen. Volg controles, inspecties, kwartierdata en netfrequentie. In het portaal combineert u visuele dashboards met uw eigen vastgoedobjecten en past u energieprofielen en installaties zelfstandig aan.
               </p>
 
               {/* Quick Tags */}
@@ -309,7 +309,7 @@ export function PlatformPage() {
               </h3>
 
               <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                Kies in de Office-plugin een eigen dataset en voeg die direct in het platform. Gekoppelde gegevens ververs je handmatig, bij het openen of op een vast interval.
+                Kies in de Office-plugin een eigen dataset en voeg die direct in het platform. Gekoppelde gegevens ververst u handmatig, bij het openen of op een vast interval.
               </p>
             </div>
 
@@ -475,7 +475,7 @@ export function PlatformPage() {
               <div className="lg:col-span-5 p-6 rounded-2xl liquid-glass border border-white/10 flex flex-col justify-between h-full">
                 <div>
                   <div className="text-xs font-mono uppercase tracking-wider text-muted-foreground font-semibold mb-4">
-                    Getoonde Data & Indicatoren
+                    Illustratieve Voorbeeldindicatoren
                   </div>
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     {activeScreen.metrics.map((m, idx) => (

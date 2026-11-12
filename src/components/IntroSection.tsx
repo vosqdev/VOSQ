@@ -29,18 +29,27 @@ export function IntroSection() {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-6 sm:gap-8 w-full text-left">
-          <div className="liquid-glass rounded-3xl p-6 sm:p-8 border border-white/10 flex flex-col justify-center">
-            <p className="text-hero-sub text-base sm:text-lg font-normal leading-relaxed text-white/90">
-              Verkrijg overzicht en inzicht in de verschillende aspecten van je eigen vastgoed en energie. VOSQ heeft een tool ontwikkeld die vastgoed en energiedata samenbrengt in één overzichtelijk platform.
+          <div className="liquid-glass rounded-3xl p-6 sm:p-8 border border-white/10 flex flex-col justify-between space-y-3">
+            <div className="text-xs font-mono font-bold uppercase tracking-wider text-primary">
+              Voor vastgoedbeleggers &amp; eigenaren
+            </div>
+            <p className="text-hero-sub text-base sm:text-lg font-normal leading-relaxed text-white/95">
+              Ontdek waar uw vastgoed beter kan presteren en welke investeringen daadwerkelijk waarde toevoegen.
+            </p>
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+              VOSQ brengt objectgegevens, energieprestaties, terugverdientijden en exploitatiekosten samen in één overzichtelijk platform voor risicobeheersing en portefeuille-optimalisatie.
             </p>
           </div>
 
-          <div className="liquid-glass rounded-3xl p-6 sm:p-8 border border-white/10 flex flex-col justify-center space-y-4">
-            <p className="text-hero-sub text-base sm:text-lg font-normal leading-relaxed opacity-90">
-              Netcongestie, exploitatiebeperkingen, wet- en regelgeving en stijgende investeringsrisico's maken een rendabele toekomst complexer.
-            </p>
+          <div className="liquid-glass rounded-3xl p-6 sm:p-8 border border-white/10 flex flex-col justify-between space-y-3">
+            <div className="text-xs font-mono font-bold uppercase tracking-wider text-primary">
+              Voor eigenaar-eindgebruikers &amp; ondernemers
+            </div>
             <p className="text-hero-sub text-base sm:text-lg font-normal leading-relaxed text-white/95">
-              VOSQ levert de applicatie om die informatie te managen, structureren, door te rekenen en beslissingen te onderbouwen.
+              Haal meer uit uw vastgoed en energieaansluiting. Ontdek mogelijkheden om kosten te beheersen en capaciteit slimmer te benutten.
+            </p>
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+              Krijg zelfstandig grip op energiekosten, piekbelasting, gecontracteerd transportvermogen, netcongestie, elektrificatie en eigen opwek of batterijopslag.
             </p>
           </div>
         </div>

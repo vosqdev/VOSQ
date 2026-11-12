@@ -38,7 +38,7 @@ export function AboutPage() {
           </div>
 
           <p className="text-hero-sub text-lg sm:text-xl font-medium leading-relaxed opacity-90 mb-10">
-            Van data naar strategie. Van inzicht naar resultaat. Wij ontwikkelen de digitale systeemoplossingen waarmee vastgoed-, energie- en projectdata samenkomen.
+            VOSQ is het digitale vastgoed- en energie-intelligenceplatform dat kennis van vastgoed, energie en digitale technologie samenbrengt. Meer inzicht. Betere beslissingen. Hoger rendement.
           </p>
         </div>
       </section>
@@ -69,15 +69,25 @@ export function AboutPage() {
 
             <div className="space-y-5 text-hero-sub text-base sm:text-lg font-medium leading-relaxed opacity-95 mb-8">
               <p className="text-white text-lg sm:text-xl font-medium leading-relaxed">
-                Het platform helpt organisaties met hun eigen contracten en actuele data, slimme analyses en strategische inzichten vooruit te maken.
+                VOSQ combineert kennis van vastgoed, energie en digitale technologie om complexe vraagstukken te vertalen naar concrete inzichten en onderbouwde keuzes — op basis van uw eigen contracten en actuele data.
               </p>
-              <div className="p-5 rounded-2xl bg-primary/10 border border-primary/20 text-white">
-                <div className="text-xs font-mono uppercase tracking-wider text-primary font-bold mb-1">
-                  100% Applicatie — Geen Consultancy
+              <div className="p-5 sm:p-6 rounded-2xl bg-primary/10 border border-primary/20 text-white space-y-3">
+                <div className="text-xs font-mono uppercase tracking-wider text-primary font-bold">
+                  Praktisch Digitaal Instrument — Geen Adviesbureau of Generieke AI
                 </div>
                 <p className="text-sm text-foreground/90 leading-relaxed">
-                  Wij positioneren ons bewust <strong>niet als adviesbureau of consultancy</strong>. Wij leveren overzicht en de mogelijkheid voor doorlopende datakoppelingen waarmee organisaties zélf de regie voeren.
+                  VOSQ is een digitaal platform — geen traditionele vastgoedadviseur en geen uitsluitend generieke AI-tool. Het instrument biedt vastgoedeigenaren, beleggers en ondernemers zelfstandig grip op kansen, risico's en mogelijke maatregelen.
                 </p>
+                <div className="grid sm:grid-cols-2 gap-3 pt-2 text-xs text-foreground/85">
+                  <div className="p-3 rounded-xl bg-black/30 border border-white/5">
+                    <strong className="text-primary block mb-0.5">Indicatieve quickscans &amp; scenarioverkenningen</strong>
+                    Snelle eerste duiding van kansen, netcapaciteit en investeringsrichtingen.
+                  </div>
+                  <div className="p-3 rounded-xl bg-black/30 border border-white/5">
+                    <strong className="text-primary block mb-0.5">Datagedreven analyses vs. definitief advies</strong>
+                    Gestructureerde beslisinformatie ter voorbereiding op professionele beoordeling en definitief advies.
+                  </div>
+                </div>
               </div>
             </div>
           </div>

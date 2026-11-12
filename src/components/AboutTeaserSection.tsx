@@ -35,8 +35,8 @@ const HOW_IT_WORKS_STEPS = [
     step: '04',
     kicker: 'BESLUITVORMING',
     title: 'Decide',
-    description: 'Onderbouw investerings-, verkoop- en exploitatiebesluiten met feiten en bankable rapportages.',
-    tag: 'AUDIT-PROOF RAPPORTAGE',
+    description: 'Onderbouw investerings-, verkoop- en exploitatiebesluiten met gestructureerde inzichten en scenariovergelijkingen.',
+    tag: 'ONDERBOUWDE BESLUITVORMING',
     icon: CheckCircle2,
   },
 ];
@@ -80,7 +80,7 @@ export function AboutTeaserSection() {
               </h2>
 
               <p className="text-hero-sub text-base sm:text-lg font-normal leading-relaxed opacity-90 text-white/95 mb-8">
-                Het platform helpt organisaties met hun eigen contracten en actuele data, slimme analyses en strategische inzichten vooruit te maken.
+                VOSQ combineert kennis van vastgoed, energie en digitale technologie om complexe vraagstukken te vertalen naar concrete inzichten en onderbouwde keuzes — met uw eigen contracten en actuele data als vertrekpunt.
               </p>
             </div>
 

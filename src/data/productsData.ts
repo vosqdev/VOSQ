@@ -75,7 +75,7 @@ export const PRODUCTS: ProductGroup[] = [
         {
           name: 'Centraal Objectregister',
           description: 'Eén uniforme registratie van ieder vastgoedobject met uniek ID, juridische entiteit, eigendomsvorm, BAG-ID, kadastrale percelen en gevalideerde oppervlaktes (BVO/VVO/GO).',
-          kpi: '100% traceerbare brondata'
+          kpi: 'Volledig traceerbare brondata'
         },
         {
           name: '10-Hoofdstukken Object Dossier',
@@ -85,20 +85,20 @@ export const PRODUCTS: ProductGroup[] = [
         {
           name: 'Levenscyclus- & Exit-Workflow',
           description: 'Beheer van actieve, herontwikkelings- en gearchiveerde objecten, inclusief een geautomatiseerde exit-checklist bij verkoop of herstructurering.',
-          kpi: 'Tot 60% snellere due diligence'
+          kpi: 'Gestructureerde due diligence voorbereiding'
         }
       ]
     },
     dashboard: {
       top: {
-        label: 'Bovenzijde: Compacte KPI-Tegels',
+        label: 'Bovenzijde: Compacte KPI-Tegels (Voorbeeld)',
         description: 'Direct inzicht in macro-indicatoren over de gehele portefeuille.',
         kpis: [
-          { title: 'Totale Portefeuillewaarde', value: '€ [Waarde]', unit: 'mln' },
-          { title: 'Bruto Huuropbrengsten', value: '€ [Jaarhuur]', unit: '/jr' },
-          { title: 'Gemiddelde Bezettingsgraad', value: '[96.4]', unit: '%' },
-          { title: 'Energielabel A of Banger', value: '[88]', unit: '%' },
-          { title: 'CO₂-Reductie t.o.v. Referentie', value: '[24.8]', unit: '%' }
+          { title: 'Totale Portefeuillewaarde', value: '€ 64,0', unit: 'mln' },
+          { title: 'Bruto Huuropbrengsten', value: '€ 4,6', unit: 'mln/jr' },
+          { title: 'Gemiddelde Bezettingsgraad', value: '96,4', unit: '%' },
+          { title: 'Energielabel A of beter', value: '88', unit: '%' },
+          { title: 'CO₂-Reductie t.o.v. Referentie', value: '24,8', unit: '%' }
         ]
       },
       center: {
@@ -157,30 +157,30 @@ export const PRODUCTS: ProductGroup[] = [
         {
           name: 'Piek- & Vermogensbewaking',
           description: 'Strikte monitoring van de vermogensformule met automatische signalering zodra het piekvermogen 90% van de GTV-contractgrens nadert.',
-          kpi: '0% onvoorziene overschrijdingsboetes'
+          kpi: 'Vroegtijdige pieksignalering'
         },
         {
           name: 'Week-Heatmap & Baseload-Analyse',
           description: 'Visuele 24/7 intensiteitsmatrix die onnodig sluipverbruik in het weekend en \'s nachts direct blootlegt.',
-          kpi: 'Tot 18% besparing op sluipverbruik'
+          kpi: 'Direct inzicht in sluipverbruik'
         },
         {
           name: 'Scenario-Simulator',
           description: 'Indicatieve toetsing van laadpleinen (EV), all-electric warmtepompen, PV-uitbreidingen en batterijopslag (BESS) tegen de fysieke én contractuele netcapaciteit.',
-          kpi: 'Directe aansluitbaarheidsvalidatie'
+          kpi: 'Indicatieve capaciteitsverkenning'
         }
       ]
     },
     dashboard: {
       top: {
-        label: 'Bovenzijde: Realtime Energie- & Vermogensindicatoren',
+        label: 'Bovenzijde: Realtime Energie- & Vermogensindicatoren (Voorbeeld)',
         description: 'Kernmeters voor actuele belasting en transportcapaciteit.',
         kpis: [
-          { title: 'Netafname Totaal', value: '[Afname]', unit: 'MWh' },
-          { title: 'Teruglevering Totaal', value: '[Teruglevering]', unit: 'MWh' },
-          { title: 'Actuele PV-Opwek', value: '[Actueel kW]', unit: 'kW' },
-          { title: 'Hoogste Kwartierpiek', value: '[Piek kW]', unit: 'kW' },
-          { title: 'GTV-Benutting', value: '[86]', unit: '%' }
+          { title: 'Netafname Totaal', value: '2.963', unit: 'MWh' },
+          { title: 'Teruglevering Totaal', value: '412', unit: 'MWh' },
+          { title: 'Actuele PV-Opwek', value: '385', unit: 'kW' },
+          { title: 'Hoogste Kwartierpiek', value: '640', unit: 'kW' },
+          { title: 'GTV-Benutting', value: '86', unit: '%' }
         ]
       },
       center: {
@@ -238,8 +238,8 @@ export const PRODUCTS: ProductGroup[] = [
         },
         {
           name: 'Multisite- & EAN-Register',
-          description: '100% dekkend overzicht van alle aansluitingen voor elektra, gas en stadswarmte met netbeheerders, meetcodes en gecontracteerde volumes.',
-          kpi: 'Geen wees-aansluitingen'
+          description: 'Gestructureerd overzicht van alle aansluitingen voor elektra, gas en stadswarmte met netbeheerders, meetcodes en gecontracteerde volumes.',
+          kpi: 'Centraal EAN-register'
         },
         {
           name: 'In- en Uitplug-Workflows',
@@ -255,14 +255,14 @@ export const PRODUCTS: ProductGroup[] = [
     },
     dashboard: {
       top: {
-        label: 'Bovenzijde: Contractuele & Portefeuille KPI-Kaarten',
+        label: 'Bovenzijde: Contractuele & Portefeuille KPI-Kaarten (Voorbeeld)',
         description: 'Overzicht van alle lopende inkoop- en raamcontracten.',
         kpis: [
-          { title: 'Actieve Raamcontracten', value: '[Aantal]', unit: 'contracten' },
-          { title: 'Aangesloten EAN-Codes', value: '[EAN Totaal]', unit: 'aansluitingen' },
-          { title: 'Elektra Volume YTD', value: '[GWh]', unit: 'GWh' },
-          { title: 'Gas & Warmte Volume', value: '[m³/GJ]', unit: 'volume' },
-          { title: 'Hedgegraad Komend Jaar', value: '[75]', unit: '%' }
+          { title: 'Actieve Raamcontracten', value: '5', unit: 'contracten' },
+          { title: 'Aangesloten EAN-Codes', value: '9', unit: 'aansluitingen' },
+          { title: 'Elektra Volume YTD', value: '26,2', unit: 'GWh' },
+          { title: 'Gas & Warmte Volume', value: '88,1', unit: 'dam³' },
+          { title: 'Hedgegraad Komend Jaar', value: '75', unit: '%' }
         ]
       },
       center: {
@@ -316,12 +316,12 @@ export const PRODUCTS: ProductGroup[] = [
         {
           name: 'Tussenmeter Reconciliatie',
           description: 'Transparante aansluiting tussen de netafname op de hoofdmeter en de som van alle onderliggende tussenmeters met automatische restverdeling.',
-          kpi: '100% sluitende meterbalans'
+          kpi: 'Sluitende meterbalans'
         },
         {
           name: 'Algemene Voorzieningen Verdeling',
           description: 'Afzonderlijke registratie van gemeenschappelijk verbruik en geautomatiseerde toerekening via vaste verdeelsleutels (zoals VVO m²).',
-          kpi: 'Juridisch onderbouwde servicekosten'
+          kpi: 'Transparante servicekosten'
         },
         {
           name: 'Data-Statuslabels',
@@ -331,20 +331,20 @@ export const PRODUCTS: ProductGroup[] = [
         {
           name: 'Huurcontract- & Indexatiebeheer',
           description: 'Traceerbaarheid van ROZ-contracten, CPI-huurindexaties, betaalstatussen en gestelde bankgaranties.',
-          kpi: 'Geen gemiste huurindexaties'
+          kpi: 'Tijdige signalering indexaties'
         }
       ]
     },
     dashboard: {
       top: {
-        label: 'Bovenzijde: Reconciliatietegels Hoofdmeter vs Tussenmeters',
+        label: 'Bovenzijde: Reconciliatietegels Hoofdmeter vs Tussenmeters (Voorbeeld)',
         description: 'Direct inzicht in totale afname en de verdeling over huurders en algemeen.',
         kpis: [
-          { title: 'Hoofdmeter Afname', value: '[MWh]', unit: 'MWh' },
-          { title: 'Gemeten Huurdersverbruik', value: '[MWh]', unit: 'MWh' },
-          { title: 'Algemene Voorzieningen', value: '[MWh]', unit: 'MWh' },
-          { title: 'Reconciliatie Verschil', value: '< 0.5', unit: '%' },
-          { title: 'Doorbelastingspercentage', value: '[98.2]', unit: '%' }
+          { title: 'Hoofdmeter Afname', value: '1.420', unit: 'MWh' },
+          { title: 'Gemeten Huurdersverbruik', value: '1.185', unit: 'MWh' },
+          { title: 'Algemene Voorzieningen', value: '231', unit: 'MWh' },
+          { title: 'Reconciliatie Verschil', value: '< 0,5', unit: '%' },
+          { title: 'Doorbelastingspercentage', value: '98,2', unit: '%' }
         ]
       },
       center: {
@@ -408,7 +408,7 @@ export const PRODUCTS: ProductGroup[] = [
         {
           name: 'EPBD IV & GACS Readiness',
           description: 'Direct inzicht in de nalevingsstatus voor utiliteitsgebouwen met klimaatinstallaties >290 kW en >70 kW.',
-          kpi: '100% wetgeving compliant'
+          kpi: 'Actueel overzicht wetgeving'
         },
         {
           name: 'Leveranciersbeheer',
@@ -419,14 +419,14 @@ export const PRODUCTS: ProductGroup[] = [
     },
     dashboard: {
       top: {
-        label: 'Bovenzijde: Keuringsmonitor & Risico-Indicator',
+        label: 'Bovenzijde: Keuringsmonitor & Risico-Indicator (Voorbeeld)',
         description: 'Realtime status van geldige, aflopende en urgente keuringen.',
         kpis: [
-          { title: 'Geldige Certificaten', value: '[Geldig]', unit: 'stuks' },
-          { title: 'Verloopt binnen 90 Dagen', value: '[Alert]', unit: 'keuringen' },
+          { title: 'Geldige Certificaten', value: '24', unit: 'stuks' },
+          { title: 'Verloopt binnen 90 Dagen', value: '3', unit: 'keuringen' },
           { title: 'Verlopen / Urgent', value: '0', unit: 'acties' },
-          { title: 'Gemiddelde NEN Score', value: '[1.8]', unit: 'score 1-6' },
-          { title: 'GACS Nalevingsgraad', value: '[92]', unit: '%' }
+          { title: 'Gemiddelde NEN Score', value: '1,8', unit: 'score 1-6' },
+          { title: 'GACS Nalevingsgraad', value: '92', unit: '%' }
         ]
       },
       center: {
@@ -501,14 +501,14 @@ export const PRODUCTS: ProductGroup[] = [
     },
     dashboard: {
       top: {
-        label: 'Bovenzijde: Kernindicatoren voor NOI & ESG',
+        label: 'Bovenzijde: Kernindicatoren voor NOI & ESG (Voorbeeld)',
         description: 'Financiële en duurzaamheidsmetrics over het lopende boekjaar.',
         kpis: [
-          { title: 'Totale NOI YTD', value: '€ [NOI]', unit: 'mln' },
-          { title: 'Bruto Jaarhuur', value: '€ [Bruto]', unit: 'mln' },
-          { title: 'Totale OPEX & Energie', value: '€ [OPEX]', unit: 'mln' },
-          { title: 'Gemiddeld NAR', value: '[6.2]', unit: '%' },
-          { title: 'Paris Proof Naleving', value: '[78]', unit: '%' }
+          { title: 'Totale NOI YTD', value: '€ 3,4', unit: 'mln' },
+          { title: 'Bruto Jaarhuur', value: '€ 4,6', unit: 'mln' },
+          { title: 'Totale OPEX & Energie', value: '€ 1,2', unit: 'mln' },
+          { title: 'Gemiddeld NAR', value: '6,2', unit: '%' },
+          { title: 'Paris Proof Naleving', value: '78', unit: '%' }
         ]
       },
       center: {

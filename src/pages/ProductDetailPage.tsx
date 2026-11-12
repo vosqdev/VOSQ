@@ -198,7 +198,7 @@ export function ProductDetailPage() {
               <LayoutDashboard className="w-5 h-5" />
             </div>
             <span className="text-xs font-mono font-bold uppercase tracking-widest text-primary">
-              3. Voorbeeld van het Dashboard
+              3. Voorbeeldweergave van het Dashboard (Indicatief)
             </span>
           </div>
 

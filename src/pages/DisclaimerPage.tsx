@@ -23,15 +23,15 @@ export function DisclaimerPage() {
 
           <div className="space-y-6 text-sm text-foreground/90 leading-relaxed font-normal">
             <p className="text-base text-white/90">
-              Deze disclaimer is van toepassing op het gebruik van deze website en het online platform. Door de website of applicatie te bezoeken en te gebruiken, ga je akkoord met onderstaande bepalingen.
+              Deze disclaimer is van toepassing op het gebruik van deze website en het online platform. Door de website of applicatie te bezoeken en te gebruiken, gaat u akkoord met onderstaande bepalingen.
             </p>
 
             <div className="space-y-2">
               <h2 className="text-lg font-bold text-white pt-3 border-t border-white/10">
-                1. Informatieve doeleinden & geen advies
+                1. Informatieve doeleinden &amp; geen bindend advies
               </h2>
               <p className="text-muted-foreground">
-                Alle informatie, visualisaties, dashboards en scenario-berekeningen op dit platform worden met zorg samengesteld. De inhoud is uitsluitend bedoeld voor informatieve en operationele doeleinden. De getoonde data en uitkomsten vormen geen juridisch, fiscaal, financieel of bindend technisch advies.
+                Alle informatie, visualisaties, indicatieve quickscans, datagedreven analyses en scenarioverkenningen op dit platform worden met zorg samengesteld. De inhoud is bedoeld ter ondersteuning van besluitvorming, maar vervangt geen professionele beoordeling of definitief juridisch, fiscaal, financieel of technisch advies.
               </p>
             </div>
 
@@ -67,7 +67,7 @@ export function DisclaimerPage() {
                 5. Vragen & Contact
               </h2>
               <p className="text-muted-foreground">
-                Heb je vragen over deze disclaimer of het platform? Neem dan eenvoudig contact met ons op via het{' '}
+                Hebt u vragen over deze disclaimer of het platform? Neem dan eenvoudig contact met ons op via het{' '}
                 <Link to="/demo-aanvragen" className="text-primary hover:underline font-medium">
                   demo- en kennismakingsformulier
                 </Link>.

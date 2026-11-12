@@ -66,10 +66,10 @@ export function PrivacyPage() {
 
             <div className="space-y-2">
               <h2 className="text-lg font-bold text-white pt-3 border-t border-white/10">
-                4. Jouw rechten
+                4. Uw rechten
               </h2>
               <p className="text-muted-foreground">
-                Conform de Algemene Verordening Gegevensbescherming (AVG/GDPR) heb je recht op inzage, correctie of verwijdering van jouw persoonsgegevens. Neem hiervoor eenvoudig contact met ons op via het{' '}
+                Conform de Algemene Verordening Gegevensbescherming (AVG/GDPR) hebt u recht op inzage, correctie of verwijdering van uw persoonsgegevens. Neem hiervoor eenvoudig contact met ons op via het{' '}
                 <Link to="/demo-aanvragen" className="text-primary hover:underline font-medium">
                   aanvraag- en contactformulier
                 </Link>.

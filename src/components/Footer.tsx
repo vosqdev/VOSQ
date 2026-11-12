@@ -18,11 +18,11 @@ export function Footer() {
             </Link>
 
             <p className="text-muted-foreground text-sm leading-relaxed mb-6 font-medium max-w-2xl">
-              VOSQ ontwikkelt digitale oplossingen en SaaS-applicaties voor Real Estate & Energy Intelligence. Wij verbinden vastgoed-, energie- en projectdata zodat organisaties complexe investerings- en ontwikkelbeslissingen sneller en beter onderbouwd kunnen nemen.
+              VOSQ is een digitaal vastgoed- en energie-intelligenceplatform dat vastgoedkennis, energie-inzicht en data-analyse samenbrengt. Het platform ondersteunt vastgoedeigenaren, beleggers en ondernemers bij het onderbouwen van beslissingen over exploitatie, energie, investeringen en toekomstwaarde.
             </p>
 
             <div className="text-xs font-mono text-primary font-bold tracking-wider uppercase mb-6">
-              Connecting Data. Powering Decisions.
+              Meer inzicht. Betere beslissingen. Hoger rendement.
             </div>
 
             <div className="space-y-2.5 text-xs text-muted-foreground">
@@ -32,7 +32,7 @@ export function Footer() {
               </Link>
               <div className="flex items-center gap-2">
                 <MapPin className="w-3.5 h-3.5 text-primary" />
-                <span>Nederland • SaaS & Cloud Platform</span>
+                <span>Nederland • Real Estate &amp; Energy Intelligence Platform</span>
               </div>
             </div>
           </div>

@@ -1,18 +1,18 @@
 # VOSQ — Real Estate & Energy Intelligence Platform
 
-> Connecting Data. Powering Decisions.
+> Meer inzicht. Betere beslissingen. Hoger rendement.
 
-VOSQ is een Nederlands technologiebedrijf dat SaaS-applicaties ontwikkelt voor Real Estate & Energy Intelligence. De software verbindt vastgoed-, energie- en projectdata in één platform, waardoor vastgoedbeleggers, woningcorporaties, projectontwikkelaars en overheden complexe verkoop-, investerings- en ontwikkelbeslissingen kunnen onderbouwen met kwantitatieve analyses.
+VOSQ is een digitaal vastgoed- en energie-intelligenceplatform dat vastgoedeigenaren, beleggers en ondernemers ondersteunt bij het analyseren, optimaliseren en toekomstbestendig maken van hun vastgoed. Het platform combineert vastgoedkennis, energie-inzicht, data-analyse en praktische digitale instrumenten voor indicatieve quickscans, datagedreven analyses en scenarioverkenningen.
 
-## Kerngegevens Organisatie
-- Bedrijfsnaam: VOSQ B.V.
-- Type onderneming: B2B Software / SaaS / PropTech & EnergyTech
+## Kerngegevens Platform
+- Platformnaam: VOSQ
+- Categorie: Digitaal Vastgoed- & Energie-Intelligenceplatform
 - Hoofdpositionering: Real Estate & Energy Intelligence
-- Pay-off: Connecting Data. Powering Decisions.
-- Nederlandse merkbelofte: Van data naar strategie. Van inzicht naar resultaat.
-- Missie: Systeemoplossingen bieden waarmee vastgoed-, energie- en projectdata samenkomen om investerings- en exploitatiebeslissingen sneller en meetbaar te onderbouwen.
-- Merkwaarden (V-O-S-Q): Verbinden, Ordenen, Strategie, Quantificatie.
-- Doelmarkten: Nederland, Europa (utiliteitsbouw, woningbouw, logistiek vastgoed, energie-infrastructuur).
+- Waardepropositie: Meer inzicht. Betere beslissingen. Hoger rendement.
+- Primaire doelgroepen: Vastgoedbeleggers & professionele vastgoedeigenaren; eigenaar-eindgebruikers & ondernemers
+- Inhoudelijke pijlers: Energie & Netcapaciteit, Vastgoed & Waardeontwikkeling, Investeringen & Scenario's, Vastgoed Intelligence & Quickscans
+- Merkwaarden (V-O-S-Q): Verbinden, Ordenen, Strategie, Quantificatie
+- Toepassingsgebied: Nederland & Europa (commercieel vastgoed, logistiek, woningbouw, energie-infrastructuur, maatschappelijk vastgoed)
 
 ## Productgroepen & Modules
 
