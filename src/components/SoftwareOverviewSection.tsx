@@ -12,10 +12,6 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-interface SoftwareOverviewSectionProps {
-  onOpenModal?: (type?: 'demo' | 'trial', context?: string) => void;
-}
-
 const ease = [0.16, 1, 0.3, 1] as const;
 
 interface ModuleItem {
@@ -85,7 +81,7 @@ const SIX_MODULES: ModuleItem[] = [
   },
 ];
 
-export function SoftwareOverviewSection({ onOpenModal }: SoftwareOverviewSectionProps) {
+export function SoftwareOverviewSection() {
   return (
     <section id="oplossingen" className="py-28 px-4 max-w-7xl mx-auto relative overflow-hidden">
       {/* Background Video from template */}

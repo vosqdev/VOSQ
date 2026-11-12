@@ -13,10 +13,6 @@ import {
   Eye
 } from 'lucide-react';
 
-interface PlatformPreviewSectionProps {
-  onOpenModal?: (type?: 'demo' | 'trial', context?: string) => void;
-}
-
 interface ProjectConfig {
   id: string;
   name: string;
@@ -69,7 +65,7 @@ const PROJECTS: ProjectConfig[] = [
   }
 ];
 
-export function PlatformPreviewSection({ onOpenModal }: PlatformPreviewSectionProps) {
+export function PlatformPreviewSection() {
   const [selectedProjectId, setSelectedProjectId] = useState<string>('brainport');
   const [activeScenario, setActiveScenario] = useState<'unmitigated' | 'bess' | 'hub'>('hub');
 

@@ -21,10 +21,6 @@ import {
 import { Button } from '@/components/ui/button';
 import { PRODUCTS, ProductGroup } from '@/data/productsData';
 
-interface ProductDetailPageProps {
-  onOpenModal?: (type?: 'demo' | 'trial', context?: string) => void;
-}
-
 const productIcons: Record<string, React.ReactNode> = {
   'vastgoedportefeuille-objectbeheer': <Building2 className="w-6 h-6 text-primary" />,
   'energiemonitor-kwartierdata': <Zap className="w-6 h-6 text-primary" />,
@@ -34,7 +30,7 @@ const productIcons: Record<string, React.ReactNode> = {
   'financien-exploitatie-esg': <TrendingUp className="w-6 h-6 text-primary" />,
 };
 
-export function ProductDetailPage({ onOpenModal }: ProductDetailPageProps) {
+export function ProductDetailPage() {
   const { productSlug } = useParams<{ productSlug: string }>();
 
   const product = PRODUCTS.find((p) => p.slug === productSlug || p.id === productSlug);
@@ -290,15 +286,16 @@ export function ProductDetailPage({ onOpenModal }: ProductDetailPageProps) {
               {product.cta.text}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button
-                variant="hero"
-                size="lg"
-                onClick={() => onOpenModal?.('demo', `CTA Product: ${product.title}`)}
-                className="h-14 px-8 text-base font-bold shadow-[0_0_30px_rgba(121,242,194,0.3)] hover:shadow-[0_0_40px_rgba(121,242,194,0.5)]"
-              >
-                <Sparkles className="w-4 h-4 mr-2" />
-                {product.cta.buttonText}
-              </Button>
+              <Link to="/demo-aanvragen">
+                <Button
+                  variant="hero"
+                  size="lg"
+                  className="h-14 px-8 text-base font-bold shadow-[0_0_30px_rgba(121,242,194,0.3)] hover:shadow-[0_0_40px_rgba(121,242,194,0.5)] cursor-pointer"
+                >
+                  <Sparkles className="w-4 h-4 mr-2" />
+                  {product.cta.buttonText}
+                </Button>
+              </Link>
               <Link to="/contact">
                 <Button
                   variant="heroSecondary"

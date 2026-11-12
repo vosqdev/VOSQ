@@ -11,11 +11,7 @@ import {
   Database
 } from 'lucide-react';
 
-interface AboutPageProps {
-  onOpenModal?: (type?: 'demo' | 'trial', context?: string) => void;
-}
-
-export function AboutPage({ onOpenModal }: AboutPageProps) {
+export function AboutPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = 'Over VOSQ | Real Estate & Energy Intelligence';

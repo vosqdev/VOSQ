@@ -1,13 +1,9 @@
 import React from 'react';
 import { motion } from 'motion/react';
 
-interface IntroSectionProps {
-  onOpenModal?: (type?: 'demo' | 'trial', context?: string) => void;
-}
-
 const ease = [0.16, 1, 0.3, 1] as const;
 
-export function IntroSection({ onOpenModal }: IntroSectionProps) {
+export function IntroSection() {
   return (
     <section className="py-20 px-4 max-w-6xl mx-auto relative">
       {/* Background radial glow */}

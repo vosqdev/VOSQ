@@ -4,10 +4,6 @@ import { BookOpen, Sparkles, ArrowRight, Zap, BatteryCharging, Building2, Layers
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
-interface InzichtenPageProps {
-  onOpenModal?: (type?: 'demo' | 'trial', context?: string) => void;
-}
-
 const ARTICLES = [
   {
     id: 'netcongestie-analyse-software',
@@ -47,7 +43,7 @@ const ARTICLES = [
   }
 ];
 
-export function InzichtenPage({ onOpenModal }: InzichtenPageProps) {
+export function InzichtenPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = 'Inzichten & Kennisbank: Netcongestie, BESS & Vastgoed | VOSQ';

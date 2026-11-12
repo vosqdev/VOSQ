@@ -4,13 +4,9 @@ import { Sparkles, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
-interface FinalCtaSectionProps {
-  onOpenModal?: (type?: 'demo' | 'trial', context?: string) => void;
-}
-
 const ease = [0.16, 1, 0.3, 1] as const;
 
-export function FinalCtaSection({ onOpenModal }: FinalCtaSectionProps) {
+export function FinalCtaSection() {
   return (
     <section className="py-24 px-4 max-w-7xl mx-auto relative overflow-hidden">
       {/* Container Glass Card */}

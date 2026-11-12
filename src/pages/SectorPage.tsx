@@ -12,10 +12,6 @@ import {
 } from 'lucide-react';
 import { SECTORS, SectorData } from '@/data/sectorsData';
 
-interface SectorPageProps {
-  onOpenModal?: (type?: 'demo' | 'trial', context?: string) => void;
-}
-
 const sectorIcons: Record<string, React.ReactNode> = {
   'woningbouw': <Building className="w-6 h-6 text-primary" />,
   'commercieel-vastgoed': <Building2 className="w-6 h-6 text-primary" />,
@@ -25,7 +21,7 @@ const sectorIcons: Record<string, React.ReactNode> = {
   'overheden-maatschappelijk': <Landmark className="w-6 h-6 text-primary" />
 };
 
-export function SectorPage({ onOpenModal }: SectorPageProps) {
+export function SectorPage() {
   const { sectorSlug } = useParams<{ sectorSlug: string }>();
   const location = useLocation();
 

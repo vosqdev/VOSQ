@@ -4,10 +4,6 @@ import { Database, FolderTree, LineChart, CheckCircle2, ArrowRight } from 'lucid
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
-interface AboutTeaserSectionProps {
-  onOpenModal?: (type?: 'demo' | 'trial', context?: string) => void;
-}
-
 const ease = [0.16, 1, 0.3, 1] as const;
 
 const HOW_IT_WORKS_STEPS = [
@@ -45,7 +41,7 @@ const HOW_IT_WORKS_STEPS = [
   },
 ];
 
-export function AboutTeaserSection({ onOpenModal }: AboutTeaserSectionProps) {
+export function AboutTeaserSection() {
   return (
     <section className="py-24 px-4 max-w-7xl mx-auto relative">
       <div className="liquid-glass rounded-3xl p-8 sm:p-12 lg:p-14 border border-white/10 shadow-2xl relative overflow-hidden">

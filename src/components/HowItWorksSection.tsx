@@ -2,10 +2,6 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Database, FolderTree, LineChart, CheckCircle2 } from 'lucide-react';
 
-interface HowItWorksSectionProps {
-  onOpenModal?: (type?: 'demo' | 'trial', context?: string) => void;
-}
-
 const ease = [0.16, 1, 0.3, 1] as const;
 
 const STEPS = [
@@ -43,7 +39,7 @@ const STEPS = [
   },
 ];
 
-export function HowItWorksSection({ onOpenModal }: HowItWorksSectionProps) {
+export function HowItWorksSection() {
   return (
     <section className="py-24 px-4 max-w-7xl mx-auto relative overflow-hidden">
       {/* Background glow */}

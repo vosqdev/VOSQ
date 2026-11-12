@@ -4,13 +4,9 @@ import { Button } from '@/components/ui/button';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
-interface HeroSectionProps {
-  onOpenModal?: (type?: 'demo' | 'trial', context?: string) => void;
-}
-
 const ease = [0.16, 1, 0.3, 1] as const;
 
-export function HeroSection({ onOpenModal }: HeroSectionProps) {
+export function HeroSection() {
 
   return (
     <section className="relative min-h-[92vh] flex flex-col justify-center overflow-hidden pt-28 pb-16">

@@ -11,10 +11,6 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-interface OplossingenPageProps {
-  onOpenModal?: (type?: 'demo' | 'trial', context?: string) => void;
-}
-
 interface ModuleItem {
   id: string;
   numberTitle: string;
@@ -82,7 +78,7 @@ const SIX_MODULES: ModuleItem[] = [
   },
 ];
 
-export function OplossingenPage({ onOpenModal }: OplossingenPageProps) {
+export function OplossingenPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = 'Software Oplossingen | VOSQ Real Estate & Energy Intelligence';

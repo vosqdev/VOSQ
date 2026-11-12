@@ -8,11 +8,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'motion/react';
 
-interface NavbarProps {
-  onOpenModal?: (type?: 'demo' | 'trial', context?: string) => void;
-}
-
-export function Navbar({ onOpenModal }: NavbarProps) {
+export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 

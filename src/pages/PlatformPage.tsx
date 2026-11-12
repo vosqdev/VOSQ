@@ -22,10 +22,6 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 
-interface PlatformPageProps {
-  onOpenModal?: (type?: 'demo' | 'trial', context?: string) => void;
-}
-
 interface PlatformScreen {
   id: number;
   slug: string;
@@ -152,7 +148,7 @@ const PLATFORM_SCREENS: PlatformScreen[] = [
   }
 ];
 
-export function PlatformPage({ onOpenModal }: PlatformPageProps) {
+export function PlatformPage() {
   const [activeIdx, setActiveIdx] = useState<number>(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState<boolean>(false);
 
