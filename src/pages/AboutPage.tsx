@@ -67,13 +67,13 @@ export function AboutPage({ onOpenModal }: AboutPageProps) {
 
           <div className="max-w-4xl relative z-10">
             <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6 leading-tight">
-              Van versnippering en data <br />
-              <span className="text-primary">naar een slim vastgoed- en energieplatform.</span>
+              De vastgoed- en energiewereld staan voor{' '}
+              <span className="text-primary">fundamentele veranderingen.</span>
             </h2>
 
             <div className="space-y-5 text-hero-sub text-base sm:text-lg font-medium leading-relaxed opacity-95 mb-8">
               <p className="text-white text-lg sm:text-xl font-medium leading-relaxed">
-                Wij brengen eigenaarschap en kennis middels software samen om eigenaren te helpen bij handel, exploitatie, inkoop en de inzet van energie en vastgoed.
+                Het platform helpt organisaties met hun eigen contracten en actuele data, slimme analyses en strategische inzichten vooruit te maken.
               </p>
               <div className="p-5 rounded-2xl bg-primary/10 border border-primary/20 text-white">
                 <div className="text-xs font-mono uppercase tracking-wider text-primary font-bold mb-1">

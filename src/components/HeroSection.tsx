@@ -57,14 +57,14 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
           </span>
         </motion.h1>
 
-        {/* Subtitel: overzicht en inzicht in vastgoed en energie */}
+        {/* Subtitel */}
         <motion.p 
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease, delay: 0.35 }}
           className="text-hero-sub text-lg sm:text-xl max-w-3xl mt-6 opacity-90 font-medium leading-relaxed"
         >
-          Verkrijg overzicht en inzicht in de verschillende aspecten van je eigen vastgoed en energie. VOSQ heeft een tool die vastgoed-, energie- en projectdata samenbrengt in één platform.
+          De wereld verandert. Energie wordt bepalend. Vastgoed moet mee. Wij brengen alles samen in één platform en maken de toekomst inzichtelijk.
         </motion.p>
 
         {/* CTA Knoppen: Primair (lime, gevuld) & Secundair (omlijnd) */}

@@ -80,11 +80,11 @@ export function AboutTeaserSection({ onOpenModal }: AboutTeaserSectionProps) {
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-bold tracking-tight text-white mb-6 leading-[1.15]">
-                Van versnippering en data naar een slim vastgoed- en energieplatform.
+                De vastgoed- en energiewereld staan voor fundamentele veranderingen.
               </h2>
 
               <p className="text-hero-sub text-base sm:text-lg font-normal leading-relaxed opacity-90 text-white/95 mb-8">
-                Wij brengen eigenaarschap en kennis middels software samen om eigenaren te helpen bij handel, exploitatie, inkoop en de inzet van energie en vastgoed.
+                Het platform helpt organisaties met hun eigen contracten en actuele data, slimme analyses en strategische inzichten vooruit te maken.
               </p>
             </div>
 
