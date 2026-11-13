@@ -214,7 +214,7 @@ export function PlatformPage() {
         {/* Feature 1: Hero Showcase Card - ZELF KIJKEN. VERDER ONDERZOEKEN. */}
         <div className="liquid-glass rounded-3xl p-8 sm:p-12 border border-white/10 mb-8 relative overflow-hidden group hover:border-primary/40 transition-all duration-300">
           <div className="grid lg:grid-cols-12 gap-8 items-center relative z-10">
-            <div className="lg:col-span-8">
+            <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-mono font-bold uppercase tracking-wider text-primary mb-4">
                 <Eye className="w-3.5 h-3.5" />
                 <span>ZELF KIJKEN. VERDER ONDERZOEKEN.</span>
@@ -245,10 +245,22 @@ export function PlatformPage() {
               </div>
             </div>
 
-            <div className="lg:col-span-4 flex justify-center">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary shadow-[0_0_40px_rgba(121,242,194,0.25)] group-hover:scale-105 transition-transform duration-300">
-                <LayoutDashboard className="w-12 h-12 text-primary" />
-              </div>
+            <div className="lg:col-span-5 flex justify-center">
+              <button
+                type="button"
+                onClick={() => {
+                  setActiveIdx(0);
+                  setIsLightboxOpen(true);
+                }}
+                className="w-full rounded-2xl overflow-hidden border border-primary/30 bg-black/40 shadow-[0_0_40px_rgba(121,242,194,0.2)] group-hover:scale-[1.02] transition-transform duration-300 cursor-zoom-in"
+                aria-label="Bekijk Dashboard Vastgoed & Energie Management in ware grootte"
+              >
+                <img
+                  src="/assets/aistudio/1_dashboard_e3d545b6.png"
+                  alt="Dashboard Vastgoed & Energie Management"
+                  className="w-full h-auto object-cover"
+                />
+              </button>
             </div>
           </div>
         </div>

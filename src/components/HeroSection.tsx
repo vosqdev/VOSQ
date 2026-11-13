@@ -71,7 +71,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, ease, delay: 0.45 }}
           className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mt-10 w-full sm:w-auto"
         >
-          <Link to="/demo-aanvragen" className="w-full sm:w-auto">
+          <Link to="/platform" className="w-full sm:w-auto">
             <Button 
               variant="hero" 
               className="w-full sm:w-auto h-14 px-8 text-base font-bold shadow-[0_0_30px_rgba(121,242,194,0.3)] hover:shadow-[0_0_45px_rgba(121,242,194,0.5)] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"

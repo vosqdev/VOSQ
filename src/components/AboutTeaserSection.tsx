@@ -11,8 +11,8 @@ const HOW_IT_WORKS_STEPS = [
     step: '01',
     kicker: 'DATA-INGESTIE',
     title: 'Connect',
-    description: 'Automatische koppeling met Kadaster, BAG, slimme meters, contracten en netbeheerdersdata.',
-    tag: 'BAG & TELEMETRIE',
+    description: 'Automatisch uploaden van informatie: BAG, slimme meters, contracten en netbeheerdersdata.',
+    tag: 'TELEMETRIE',
     icon: Database,
   },
   {
@@ -20,22 +20,22 @@ const HOW_IT_WORKS_STEPS = [
     kicker: 'HARMONISATIE',
     title: 'Structure',
     description: 'Versnipperde spreadsheets en documenten worden geordend in één uniform en gevalideerd objectdossier.',
-    tag: 'EÉN BRON VAN WAARHEID',
+    tag: 'EÉN BRON VAN INFORMATIE',
     icon: FolderTree,
   },
   {
     step: '03',
     kicker: 'SIMULATIE',
     title: 'Analyse',
-    description: 'Realtime modellering van kwartierwaarden, transportcapaciteit, BESS-batterijopslag en ESG-doelen.',
-    tag: 'KWARTIERWAARDE ENGINE',
+    description: 'Modellering van energie zoals kwartierdata, transportcapaciteit, BESS-batterijopslag, laadpalen en ESG-doelen.',
+    tag: 'ENERGIEWAARDE',
     icon: LineChart,
   },
   {
     step: '04',
     kicker: 'BESLUITVORMING',
     title: 'Decide',
-    description: 'Onderbouw investerings-, verkoop- en exploitatiebesluiten met gestructureerde inzichten en scenariovergelijkingen.',
+    description: 'Inspecties, controles, investerings-, verkoop- en exploitatiecontracten met gestructureerde inzichten en scenariovergelijkingen.',
     tag: 'ONDERBOUWDE BESLUITVORMING',
     icon: CheckCircle2,
   },
@@ -90,15 +90,6 @@ export function AboutTeaserSection() {
                 <Button variant="hero" className="w-full sm:w-auto h-12 px-6 text-sm font-bold shadow-[0_0_25px_rgba(121,242,194,0.3)]">
                   Ontdek het verhaal achter VOSQ
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </Link>
-
-              <Link to="/demo-aanvragen" className="w-full sm:w-auto">
-                <Button
-                  variant="heroSecondary"
-                  className="w-full sm:w-auto h-12 px-6 text-sm border border-white/10 hover:bg-white/5"
-                >
-                  Plan een kennismaking
                 </Button>
               </Link>
             </div>
