@@ -75,13 +75,14 @@ export function AboutTeaserSection() {
                 />
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-bold tracking-tight text-white mb-6 leading-[1.15]">
-                De vastgoed- en energiewereld staan voor fundamentele veranderingen.
-              </h2>
-
-              <p className="text-hero-sub text-base sm:text-lg font-normal leading-relaxed opacity-90 text-white/95 mb-8">
-                VOSQ combineert kennis van vastgoed, energie en digitale technologie om complexe vraagstukken te vertalen naar concrete inzichten en onderbouwde keuzes — met uw eigen contracten en actuele data als vertrekpunt.
-              </p>
+              <div className="space-y-4 mb-8 text-hero-sub text-base sm:text-lg font-normal leading-relaxed opacity-95 text-white/95">
+                <p>
+                  Met de juiste tools de financiële, technische en energetische prestaties van het vastgoed te verbeteren. Van energiekosten en netcapaciteit tot verduurzaming, investeringsscenario's en toekomstwaarde.
+                </p>
+                <p>
+                  VOSQ combineert kennis van vastgoed, energie en digitale technologie om complexe vraagstukken te vertalen naar concrete inzichten om onderbouwde keuzes te maken — met uw eigen contracten en actuele data als vertrekpunt.
+                </p>
+              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">

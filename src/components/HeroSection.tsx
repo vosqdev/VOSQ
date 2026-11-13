@@ -45,11 +45,11 @@ export function HeroSection() {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease, delay: 0.25 }}
-          className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.08] tracking-tighter max-w-5xl"
+          className="text-3xl sm:text-5xl lg:text-[3.75rem] font-bold leading-[1.1] tracking-tighter max-w-5xl"
         >
-          <span className="text-white drop-shadow-sm">Meer inzicht. Betere beslissingen.</span><br />
+          <span className="text-white drop-shadow-sm">De vastgoed- en energiewereld</span><br />
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary/95 to-primary/70 drop-shadow-[0_0_35px_rgba(121,242,194,0.35)]">
-            Hoger rendement.
+            staan voor fundamentele veranderingen.
           </span>
         </motion.h1>
 
@@ -58,9 +58,10 @@ export function HeroSection() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease, delay: 0.35 }}
-          className="text-hero-sub text-lg sm:text-xl max-w-3xl mt-6 opacity-90 font-medium leading-relaxed"
+          className="text-hero-sub text-lg sm:text-xl max-w-3xl mt-6 opacity-95 font-medium leading-relaxed"
         >
-          VOSQ helpt vastgoedeigenaren, beleggers en ondernemers om de financiële, technische en energetische prestaties van hun vastgoed te verbeteren. Van energiekosten en netcapaciteit tot verduurzaming, investeringsscenario's en toekomstwaarde.
+          VOSQ helpt vastgoedeigenaren, beleggers en ondernemers in:{' '}
+          <span className="text-white font-semibold">Meer inzicht. Betere beslissingen. Hoger rendement.</span>
         </motion.p>
 
         {/* CTA Knoppen: Primair (lime, gevuld) & Secundair (omlijnd) */}
