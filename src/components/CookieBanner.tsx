@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { ShieldCheck, X, Check } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '@/lib/i18n';
 
 export function CookieBanner() {
   const [visible, setVisible] = useState(false);
+  const { isEn } = useLanguage();
 
   useEffect(() => {
     const consent = localStorage.getItem('vosq_cookie_consent');
@@ -34,18 +36,22 @@ export function CookieBanner() {
             <ShieldCheck className="w-4 h-4" />
           </div>
           <div>
-            <h4 className="text-sm font-bold text-white">Privacy & Cookie-Instellingen</h4>
+            <h4 className="text-sm font-bold text-white">
+              {isEn ? 'Privacy & Cookie Settings' : 'Privacy & Cookie-Instellingen'}
+            </h4>
             <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
-              Wij gebruiken functionele en geanonimiseerde analytische cookies om de werking van het platform te optimaliseren conform de AVG.
+              {isEn
+                ? 'We use functional and anonymized analytical cookies to optimize platform performance in compliance with GDPR.'
+                : 'Wij gebruiken functionele en geanonimiseerde analytische cookies om de werking van het platform te optimaliseren conform de AVG.'}
             </p>
           </div>
         </div>
 
         <div className="flex items-center justify-between text-[11px] text-muted-foreground pt-2 mb-4 border-t border-white/5">
           <Link to="/privacy" className="text-primary hover:underline">
-            Lees ons privacybeleid
+            {isEn ? 'Read our privacy policy' : 'Lees ons privacybeleid'}
           </Link>
-          <span>Geen tracking voor derden</span>
+          <span>{isEn ? 'No third-party tracking' : 'Geen tracking voor derden'}</span>
         </div>
 
         <div className="flex items-center gap-2">
@@ -55,7 +61,7 @@ export function CookieBanner() {
             onClick={handleAcceptAll}
             className="flex-1 h-9 text-xs font-bold"
           >
-            Alles accepteren
+            {isEn ? 'Accept all' : 'Alles accepteren'}
           </Button>
 
           <Button
@@ -64,7 +70,7 @@ export function CookieBanner() {
             onClick={handleAcceptNecessary}
             className="h-9 px-3 text-xs border border-white/10"
           >
-            Alleen noodzakelijk
+            {isEn ? 'Necessary only' : 'Alleen noodzakelijk'}
           </Button>
         </div>
       </div>

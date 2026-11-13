@@ -10,6 +10,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useLanguage, Language } from '@/lib/i18n';
 
 interface ModuleItem {
   id: string;
@@ -24,86 +25,168 @@ interface ModuleItem {
   icon: React.ComponentType<{ className?: string }>;
 }
 
-const SIX_MODULES: ModuleItem[] = [
-  {
-    id: 'vastgoed-objectdossier',
-    category: 'Vastgoed Intelligence & Quickscans',
-    numberTitle: '1. Vastgoed- & Objectdossier',
-    description: 'Brengt BVO/VVO-oppervlaktes, WOZ-beschikkingen, kadastrale percelen, energielabels en splitsingsaktes samen in één uniform dossier.',
-    benefit: 'Direct overzicht en één betrouwbare bron van waarheid bij portefeuilleregie, taxaties en transacties.',
-    ctaLabel: 'Ontdek uw vastgoedkansen',
-    slug: 'vastgoedportefeuille-objectbeheer',
-    badgeStyle: 'bg-sky-500/15 border-sky-500/25 text-sky-400',
-    linkStyle: 'text-sky-400 hover:text-sky-300',
-    icon: Building2,
-  },
-  {
-    id: 'energiemonitor-netcongestie',
-    category: 'Energie & Netcapaciteit',
-    numberTitle: '2. Energiemonitor & Netcongestie',
-    description: 'Analyseert kwartierdata, piekbelasting, gecontracteerd transportvermogen (GTV) en scenario’s voor batterijopslag (BESS).',
-    benefit: 'Beheers energiekosten, voorkom onnodige overschrijdingen en benut beschikbare netcapaciteit slimmer.',
-    ctaLabel: 'Analyseer uw netcapaciteit',
-    slug: 'energiemonitor-kwartierdata',
-    badgeStyle: 'bg-amber-500/15 border-amber-500/25 text-amber-400',
-    linkStyle: 'text-amber-400 hover:text-amber-300',
-    icon: Zap,
-  },
-  {
-    id: 'centraal-contractenbeheer',
-    category: 'Investeringen & Scenario\'s',
-    numberTitle: '3. Centraal Contractenbeheer (L1/L2/L3)',
-    description: 'Koppelt raamovereenkomsten op portefeuilleniveau aan deelcontracten, inkooptranches en individuele EAN-aansluitingen.',
-    benefit: 'Voorkom stilzwijgende verlengingen, behoud inkoopvrijheid en vergelijk scenario’s voor energiekosten en risico’s.',
-    ctaLabel: 'Vergelijk investeringsscenario\'s',
-    slug: 'energiecontract-ean-management',
-    badgeStyle: 'bg-indigo-500/15 border-indigo-500/25 text-indigo-400',
-    linkStyle: 'text-indigo-400 hover:text-indigo-300',
-    icon: Layers,
-  },
-  {
-    id: 'onderhoud-scios-keuringen',
-    category: 'Vastgoed & Waardeontwikkeling',
-    numberTitle: '4. Onderhoud, SCIOS & Keuringen',
-    description: 'Bewaakt SCIOS Scope 8/10/12-keuringen, EPBD IV-verplichtingen, NEN 2767-conditiemetingen en het meerjarenonderhoudsplan.',
-    benefit: 'Ondersteunt verzekerbaarheid, tijdige naleving van wetgeving en verduurzaming met behoud van gebruikswaarde.',
-    ctaLabel: 'Bekijk de mogelijkheden',
-    slug: 'onderhoud-keuringen-gacs',
-    badgeStyle: 'bg-emerald-500/15 border-emerald-500/25 text-emerald-400',
-    linkStyle: 'text-emerald-400 hover:text-emerald-300',
-    icon: ShieldCheck,
-  },
-  {
-    id: 'huurders-servicekosten',
-    category: 'Energie & Netcapaciteit',
-    numberTitle: '5. Huurders & Servicekosten',
-    description: 'Reconcilieert hoofd- en tussenmeters en verdeelt nutsvoorzieningen en algemene lasten transparant per huurder en m².',
-    benefit: 'Vermindert discussie over servicekosten en beperkt niet-verhaalbare energielasten voor de gebouweigenaar.',
-    ctaLabel: 'Bekijk module in demo',
-    slug: 'huurdersadministratie-kostenallocatie',
-    badgeStyle: 'bg-purple-500/15 border-purple-500/25 text-purple-400',
-    linkStyle: 'text-purple-400 hover:text-purple-300',
-    icon: TrendingUp,
-  },
-  {
-    id: 'exit-desinvesteringsworkflow',
-    category: 'Vastgoed & Waardeontwikkeling',
-    numberTitle: '6. Exit- & Desinvesteringsworkflow',
-    description: 'Structureert de ontkoppeling van EAN-aansluitingen en stelt een overzichtelijk due diligence dossier samen bij verkoop.',
-    benefit: 'Snellere en beter onderbouwde voorbereiding bij herfinanciering, transformatie of desinvestering van vastgoed.',
-    ctaLabel: 'Bekijk module in demo',
-    slug: 'financien-exploitatie-esg',
-    badgeStyle: 'bg-rose-500/15 border-rose-500/25 text-rose-400',
-    linkStyle: 'text-rose-400 hover:text-rose-300',
-    icon: FileText,
-  },
-];
+const SIX_MODULES: Record<Language, ModuleItem[]> = {
+  nl: [
+    {
+      id: 'vastgoed-objectdossier',
+      category: 'Vastgoed Intelligence & Quickscans',
+      numberTitle: '1. Vastgoed- & Objectdossier',
+      description: 'Brengt BVO/VVO-oppervlaktes, WOZ-beschikkingen, kadastrale percelen, energielabels en splitsingsaktes samen in één uniform dossier.',
+      benefit: 'Direct overzicht en één betrouwbare bron van waarheid bij portefeuilleregie, taxaties en transacties.',
+      ctaLabel: 'Ontdek uw vastgoedkansen',
+      slug: 'vastgoedportefeuille-objectbeheer',
+      badgeStyle: 'bg-sky-500/15 border-sky-500/25 text-sky-400',
+      linkStyle: 'text-sky-400 hover:text-sky-300',
+      icon: Building2,
+    },
+    {
+      id: 'energiemonitor-netcongestie',
+      category: 'Energie & Netcapaciteit',
+      numberTitle: '2. Energiemonitor & Netcongestie',
+      description: 'Analyseert kwartierdata, piekbelasting, gecontracteerd transportvermogen (GTV) en scenario’s voor batterijopslag (BESS).',
+      benefit: 'Beheers energiekosten, voorkom onnodige overschrijdingen en benut beschikbare netcapaciteit slimmer.',
+      ctaLabel: 'Analyseer uw netcapaciteit',
+      slug: 'energiemonitor-kwartierdata',
+      badgeStyle: 'bg-amber-500/15 border-amber-500/25 text-amber-400',
+      linkStyle: 'text-amber-400 hover:text-amber-300',
+      icon: Zap,
+    },
+    {
+      id: 'centraal-contractenbeheer',
+      category: 'Investeringen & Scenario\'s',
+      numberTitle: '3. Centraal Contractenbeheer (L1/L2/L3)',
+      description: 'Koppelt raamovereenkomsten op portefeuilleniveau aan deelcontracten, inkooptranches en individuele EAN-aansluitingen.',
+      benefit: 'Voorkom stilzwijgende verlengingen, behoud inkoopvrijheid en vergelijk scenario’s voor energiekosten en risico’s.',
+      ctaLabel: 'Vergelijk investeringsscenario\'s',
+      slug: 'energiecontract-ean-management',
+      badgeStyle: 'bg-indigo-500/15 border-indigo-500/25 text-indigo-400',
+      linkStyle: 'text-indigo-400 hover:text-indigo-300',
+      icon: Layers,
+    },
+    {
+      id: 'onderhoud-scios-keuringen',
+      category: 'Vastgoed & Waardeontwikkeling',
+      numberTitle: '4. Onderhoud, SCIOS & Keuringen',
+      description: 'Bewaakt SCIOS Scope 8/10/12-keuringen, EPBD IV-verplichtingen, NEN 2767-conditiemetingen en het meerjarenonderhoudsplan.',
+      benefit: 'Ondersteunt verzekerbaarheid, tijdige naleving van wetgeving en verduurzaming met behoud van gebruikswaarde.',
+      ctaLabel: 'Bekijk de mogelijkheden',
+      slug: 'onderhoud-keuringen-gacs',
+      badgeStyle: 'bg-emerald-500/15 border-emerald-500/25 text-emerald-400',
+      linkStyle: 'text-emerald-400 hover:text-emerald-300',
+      icon: ShieldCheck,
+    },
+    {
+      id: 'huurders-servicekosten',
+      category: 'Energie & Netcapaciteit',
+      numberTitle: '5. Huurders & Servicekosten',
+      description: 'Reconcilieert hoofd- en tussenmeters en verdeelt nutsvoorzieningen en algemene lasten transparant per huurder en m².',
+      benefit: 'Vermindert discussie over servicekosten en beperkt niet-verhaalbare energielasten voor de gebouweigenaar.',
+      ctaLabel: 'Bekijk module in demo',
+      slug: 'huurdersadministratie-kostenallocatie',
+      badgeStyle: 'bg-purple-500/15 border-purple-500/25 text-purple-400',
+      linkStyle: 'text-purple-400 hover:text-purple-300',
+      icon: TrendingUp,
+    },
+    {
+      id: 'exit-desinvesteringsworkflow',
+      category: 'Vastgoed & Waardeontwikkeling',
+      numberTitle: '6. Exit- & Desinvesteringsworkflow',
+      description: 'Structureert de ontkoppeling van EAN-aansluitingen en stelt een overzichtelijk due diligence dossier samen bij verkoop.',
+      benefit: 'Snellere en beter onderbouwde voorbereiding bij herfinanciering, transformatie of desinvestering van vastgoed.',
+      ctaLabel: 'Bekijk module in demo',
+      slug: 'financien-exploitatie-esg',
+      badgeStyle: 'bg-rose-500/15 border-rose-500/25 text-rose-400',
+      linkStyle: 'text-rose-400 hover:text-rose-300',
+      icon: FileText,
+    },
+  ],
+  en: [
+    {
+      id: 'vastgoed-objectdossier',
+      category: 'Real Estate Intelligence & Quickscans',
+      numberTitle: '1. Property & Asset Dossier',
+      description: 'Consolidates GFA/NLA floor areas, municipal valuations (WOZ), cadastral parcels, EPC ratings, and deeds of division into one uniform dossier.',
+      benefit: 'Immediate clarity and a single source of truth for portfolio governance, valuations, and transactions.',
+      ctaLabel: 'Discover your property opportunities',
+      slug: 'vastgoedportefeuille-objectbeheer',
+      badgeStyle: 'bg-sky-500/15 border-sky-500/25 text-sky-400',
+      linkStyle: 'text-sky-400 hover:text-sky-300',
+      icon: Building2,
+    },
+    {
+      id: 'energiemonitor-netcongestie',
+      category: 'Energy & Grid Capacity',
+      numberTitle: '2. Energy Monitor & Grid Congestion',
+      description: 'Analyzes quarter-hour meter data, peak loads, contracted transport capacity (GTV), and battery storage (BESS) scenarios.',
+      benefit: 'Control energy expenses, prevent costly capacity overruns, and make smarter use of available grid capacity.',
+      ctaLabel: 'Analyze your grid capacity',
+      slug: 'energiemonitor-kwartierdata',
+      badgeStyle: 'bg-amber-500/15 border-amber-500/25 text-amber-400',
+      linkStyle: 'text-amber-400 hover:text-amber-300',
+      icon: Zap,
+    },
+    {
+      id: 'centraal-contractenbeheer',
+      category: 'Investments & Scenarios',
+      numberTitle: '3. Central Contract Management (L1/L2/L3)',
+      description: 'Links portfolio-level framework agreements to sub-contracts, procurement tranches, and individual EAN metering connections.',
+      benefit: 'Prevent silent renewals, maintain procurement flexibility, and compare energy cost and risk scenarios.',
+      ctaLabel: 'Compare investment scenarios',
+      slug: 'energiecontract-ean-management',
+      badgeStyle: 'bg-indigo-500/15 border-indigo-500/25 text-indigo-400',
+      linkStyle: 'text-indigo-400 hover:text-indigo-300',
+      icon: Layers,
+    },
+    {
+      id: 'onderhoud-scios-keuringen',
+      category: 'Real Estate & Value Development',
+      numberTitle: '4. Maintenance, SCIOS & Inspections',
+      description: 'Monitors SCIOS Scope 8/10/12 inspections, EPBD IV obligations, NEN 2767 condition assessments, and multi-year maintenance plans (MJOP).',
+      benefit: 'Supports insurability, timely regulatory compliance, and sustainable upgrades while safeguarding asset usability.',
+      ctaLabel: 'Explore possibilities',
+      slug: 'onderhoud-keuringen-gacs',
+      badgeStyle: 'bg-emerald-500/15 border-emerald-500/25 text-emerald-400',
+      linkStyle: 'text-emerald-400 hover:text-emerald-300',
+      icon: ShieldCheck,
+    },
+    {
+      id: 'huurders-servicekosten',
+      category: 'Energy & Grid Capacity',
+      numberTitle: '5. Tenants & Service Charges',
+      description: 'Reconciles main meters with sub-meters and transparently allocates utility and shared facility costs by tenant and m².',
+      benefit: 'Reduces disputes over service charge settlements and limits non-recoverable energy expenses for property owners.',
+      ctaLabel: 'View module in demo',
+      slug: 'huurdersadministratie-kostenallocatie',
+      badgeStyle: 'bg-purple-500/15 border-purple-500/25 text-purple-400',
+      linkStyle: 'text-purple-400 hover:text-purple-300',
+      icon: TrendingUp,
+    },
+    {
+      id: 'exit-desinvesteringsworkflow',
+      category: 'Real Estate & Value Development',
+      numberTitle: '6. Exit & Divestment Workflow',
+      description: 'Structures the offboarding of EAN connections and compiles a transparent due diligence dossier ahead of asset disposal.',
+      benefit: 'Faster, better-substantiated preparation for refinancing, redevelopment, or real estate divestment.',
+      ctaLabel: 'View module in demo',
+      slug: 'financien-exploitatie-esg',
+      badgeStyle: 'bg-rose-500/15 border-rose-500/25 text-rose-400',
+      linkStyle: 'text-rose-400 hover:text-rose-300',
+      icon: FileText,
+    },
+  ],
+};
 
 export function OplossingenPage() {
+  const { lang, isEn } = useLanguage();
+
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = 'Oplossingen & Modules | VOSQ Platform';
-  }, []);
+    document.title = isEn
+      ? 'Solutions & Modules | VOSQ Platform'
+      : 'Oplossingen & Modules | VOSQ Platform';
+  }, [isEn]);
+
+  const modules = SIX_MODULES[lang];
 
   return (
     <div className="pt-32 pb-24 relative overflow-hidden">
@@ -131,20 +214,24 @@ export function OplossingenPage() {
         <div className="text-center max-w-4xl mx-auto mb-16 sm:mb-20">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full liquid-glass border border-white/10 mb-6 text-xs font-semibold text-primary">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>VOSQ PLATFORM MODULES</span>
+            <span>{isEn ? 'VOSQ PLATFORM MODULES' : 'VOSQ PLATFORM MODULES'}</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white mb-5 leading-[1.12]">
-            Zes complementaire modules in één platform
+            {isEn
+              ? 'Six complementary modules in one platform'
+              : 'Zes complementaire modules in één platform'}
           </h1>
           <p className="text-hero-sub text-base sm:text-xl font-normal leading-relaxed opacity-85 max-w-3xl mx-auto">
-            Praktische digitale instrumenten voor vastgoedeigenaren, beleggers en ondernemers — voor indicatieve quickscans, datagedreven analyses en scenarioverkenningen.
+            {isEn
+              ? 'Practical digital instruments for property owners, investors, and entrepreneurs — built for indicative quickscans, data-driven analyses, and scenario exploration.'
+              : 'Praktische digitale instrumenten voor vastgoedeigenaren, beleggers en ondernemers — voor indicatieve quickscans, datagedreven analyses en scenarioverkenningen.'}
           </p>
         </div>
 
         {/* 6 Modules Grid (2 rows x 3 columns) */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {SIX_MODULES.map((module) => {
+          {modules.map((module) => {
             const Icon = module.icon;
             return (
               <div
@@ -174,7 +261,9 @@ export function OplossingenPage() {
 
                   {/* User Benefit */}
                   <p className="text-xs text-foreground/85 leading-relaxed mb-6 p-3 rounded-xl bg-white/[0.03] border border-white/5">
-                    <strong className="text-primary font-semibold block mb-0.5">Uw voordeel</strong>
+                    <strong className="text-primary font-semibold block mb-0.5">
+                      {isEn ? 'Your advantage' : 'Uw voordeel'}
+                    </strong>
                     {module.benefit}
                   </p>
                 </div>

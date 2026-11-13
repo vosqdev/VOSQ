@@ -3,14 +3,17 @@ import { Link, useLocation } from 'react-router-dom';
 import { 
   Menu, 
   X, 
-  Sparkles
+  Sparkles,
+  Globe
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'motion/react';
+import { useLanguage } from '@/lib/i18n';
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { lang, setLang, isEn } = useLanguage();
 
   // Close mobile drawer on route change
   useEffect(() => {
@@ -40,13 +43,13 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Floating Capsule Bar */}
         <nav 
-          aria-label="Hoofdnavigatie"
+          aria-label={isEn ? 'Main navigation' : 'Hoofdnavigatie'}
           className="w-full bg-[#0d0e14]/90 backdrop-blur-2xl border border-white/10 rounded-3xl px-4 sm:px-6 py-3 flex items-center justify-between shadow-2xl shadow-black/80 pointer-events-auto relative overflow-visible"
         >
           {/* Logo Badge */}
           <Link 
             to="/" 
-            className="flex items-center gap-2 group cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary rounded-xl py-0.5"
+            className="flex items-center gap-2 group cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary rounded-xl py-0.5 shrink-0"
             aria-label="VOSQ Home"
           >
             <img 
@@ -56,7 +59,7 @@ export function Navbar() {
             />
           </Link>
 
-          {/* Desktop Navigation Links - Clean Direct Links Without Dropdowns */}
+          {/* Desktop Navigation Links */}
           <div className="hidden lg:flex items-center gap-6 text-sm font-medium text-foreground/85">
             <Link 
               to="/" 
@@ -73,7 +76,7 @@ export function Navbar() {
                 isSolutionsActive ? 'text-primary font-semibold' : ''
               }`}
             >
-              Oplossingen
+              {isEn ? 'Solutions' : 'Oplossingen'}
             </Link>
 
             <Link 
@@ -91,7 +94,7 @@ export function Navbar() {
                 location.pathname === '/over-vosq' ? 'text-primary font-semibold' : ''
               }`}
             >
-              Over VOSQ
+              {isEn ? 'About VOSQ' : 'Over VOSQ'}
             </Link>
 
             <Link 
@@ -104,8 +107,40 @@ export function Navbar() {
             </Link>
           </div>
 
-          {/* Right Action Button (Desktop CTA) */}
-          <div className="hidden sm:flex items-center gap-3">
+          {/* Right Action Controls (Desktop/Tablet CTA + Language Switcher) */}
+          <div className="hidden lg:flex items-center gap-2.5">
+            <div
+              role="group"
+              aria-label={isEn ? 'Language selector' : 'Taalkeuze'}
+              className="inline-flex items-center p-1 rounded-xl bg-white/5 border border-white/10"
+            >
+              <Globe className="w-3.5 h-3.5 text-muted-foreground ml-1.5 mr-1 shrink-0" />
+              <button
+                type="button"
+                onClick={() => setLang('nl')}
+                aria-pressed={lang === 'nl'}
+                className={`px-2 py-1 rounded-lg text-[11px] font-bold tracking-wider transition-all cursor-pointer ${
+                  lang === 'nl'
+                    ? 'bg-primary text-background shadow-[0_0_12px_rgba(121,242,194,0.3)]'
+                    : 'text-muted-foreground hover:text-white'
+                }`}
+              >
+                NL
+              </button>
+              <button
+                type="button"
+                onClick={() => setLang('en')}
+                aria-pressed={lang === 'en'}
+                className={`px-2 py-1 rounded-lg text-[11px] font-bold tracking-wider transition-all cursor-pointer ${
+                  lang === 'en'
+                    ? 'bg-primary text-background shadow-[0_0_12px_rgba(121,242,194,0.3)]'
+                    : 'text-muted-foreground hover:text-white'
+                }`}
+              >
+                EN
+              </button>
+            </div>
+
             <Link to="/demo-aanvragen" tabIndex={-1}>
               <Button
                 variant="hero"
@@ -113,27 +148,63 @@ export function Navbar() {
                 className="h-10 px-5 text-xs font-bold uppercase tracking-wider shadow-[0_0_20px_rgba(121,242,194,0.3)] hover:shadow-[0_0_30px_rgba(121,242,194,0.5)] transition-all cursor-pointer focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
               >
                 <Sparkles className="w-3.5 h-3.5 mr-1.5" />
-                Demo aanvragen
+                {isEn ? 'Request demo' : 'Demo aanvragen'}
               </Button>
             </Link>
           </div>
 
-          {/* Mobile Navigation Controls */}
-          <div className="flex lg:hidden items-center gap-2">
+          {/* Mobile & Tablet Controls (Language Switcher + Demo Button + Hamburger) */}
+          <div className="flex lg:hidden items-center gap-1.5 sm:gap-2">
+            <div
+              role="group"
+              aria-label={isEn ? 'Language selector' : 'Taalkeuze'}
+              className="inline-flex items-center p-0.5 rounded-xl bg-white/5 border border-white/10"
+            >
+              <button
+                type="button"
+                onClick={() => setLang('nl')}
+                aria-pressed={lang === 'nl'}
+                className={`px-2 py-1.5 rounded-lg text-[11px] font-bold tracking-wider transition-all cursor-pointer ${
+                  lang === 'nl'
+                    ? 'bg-primary text-background shadow-[0_0_10px_rgba(121,242,194,0.25)]'
+                    : 'text-muted-foreground hover:text-white'
+                }`}
+              >
+                NL
+              </button>
+              <button
+                type="button"
+                onClick={() => setLang('en')}
+                aria-pressed={lang === 'en'}
+                className={`px-2 py-1.5 rounded-lg text-[11px] font-bold tracking-wider transition-all cursor-pointer ${
+                  lang === 'en'
+                    ? 'bg-primary text-background shadow-[0_0_10px_rgba(121,242,194,0.25)]'
+                    : 'text-muted-foreground hover:text-white'
+                }`}
+              >
+                EN
+              </button>
+            </div>
+
             <Link to="/demo-aanvragen" tabIndex={-1}>
               <Button
                 variant="hero"
                 size="sm"
-                className="h-9 px-3.5 text-xs font-bold"
+                className="h-9 px-3 sm:px-4 text-xs font-bold"
               >
-                Demo
+                {isEn ? 'Demo' : 'Demo'}
               </Button>
             </Link>
+
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-white transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary cursor-pointer"
-              aria-label={mobileMenuOpen ? 'Menu sluiten' : 'Menu openen'}
+              aria-label={
+                mobileMenuOpen
+                  ? (isEn ? 'Close menu' : 'Menu sluiten')
+                  : (isEn ? 'Open menu' : 'Menu openen')
+              }
               aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -170,7 +241,7 @@ export function Navbar() {
                   isSolutionsActive ? 'text-primary' : 'text-white'
                 }`}
               >
-                <span>Oplossingen</span>
+                <span>{isEn ? 'Solutions' : 'Oplossingen'}</span>
               </Link>
 
               <Link 
@@ -190,7 +261,7 @@ export function Navbar() {
                   location.pathname === '/over-vosq' ? 'text-primary' : 'text-white'
                 }`}
               >
-                Over VOSQ
+                {isEn ? 'About VOSQ' : 'Over VOSQ'}
               </Link>
 
               <Link 
@@ -213,7 +284,7 @@ export function Navbar() {
                   className="w-full h-12 text-sm font-bold shadow-[0_0_20px_rgba(121,242,194,0.3)]"
                 >
                   <Sparkles className="w-4 h-4 mr-2" />
-                  Vraag een demo aan
+                  {isEn ? 'Request a demo' : 'Vraag een demo aan'}
                 </Button>
               </Link>
             </div>

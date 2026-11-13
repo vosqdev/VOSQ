@@ -10,7 +10,9 @@ import {
   AlertTriangle, 
   ChevronRight
 } from 'lucide-react';
-import { SECTORS, SectorData } from '@/data/sectorsData';
+import { SECTORS } from '@/data/sectorsData';
+import { SECTORS_EN } from '@/data/sectorsDataEn';
+import { useLanguage } from '@/lib/i18n';
 
 const sectorIcons: Record<string, React.ReactNode> = {
   'woningbouw': <Building className="w-6 h-6 text-primary" />,
@@ -24,9 +26,12 @@ const sectorIcons: Record<string, React.ReactNode> = {
 export function SectorPage() {
   const { sectorSlug } = useParams<{ sectorSlug: string }>();
   const location = useLocation();
+  const { isEn } = useLanguage();
+
+  const sectorList = isEn ? SECTORS_EN : SECTORS;
 
   // Find sector by slug, alias, or pathname
-  const sector = SECTORS.find((s) => {
+  const sector = sectorList.find((s) => {
     if (sectorSlug && (s.slug === sectorSlug || s.aliases.includes(sectorSlug))) {
       return true;
     }
@@ -57,7 +62,9 @@ export function SectorPage() {
         <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground mb-6 relative z-10">
           <Link to="/" className="hover:text-primary transition-colors">Home</Link>
           <ChevronRight className="w-3 h-3" />
-          <Link to="/#sectoren" className="hover:text-primary transition-colors">Sectoren</Link>
+          <Link to="/#sectoren" className="hover:text-primary transition-colors">
+            {isEn ? 'Sectors' : 'Sectoren'}
+          </Link>
           <ChevronRight className="w-3 h-3" />
           <span className="text-white font-semibold">{sector.title}</span>
         </div>
@@ -76,8 +83,6 @@ export function SectorPage() {
           <p className="text-hero-sub text-lg sm:text-xl font-medium leading-relaxed opacity-90 mb-8 max-w-3xl">
             {sector.summary}
           </p>
-
-
         </div>
 
         {/* Metrics Grid */}
@@ -99,10 +104,12 @@ export function SectorPage() {
       <section className="px-4 max-w-7xl mx-auto py-16">
         <div className="mb-12">
           <span className="text-xs font-mono uppercase tracking-widest text-primary font-bold block mb-2">
-            Sector-Uitdagingen
+            {isEn ? 'Sector Challenges' : 'Sector-Uitdagingen'}
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-            Waar organisaties in {sector.title.toLowerCase()} tegenaan lopen
+            {isEn
+              ? `Key challenges for organizations in ${sector.title.toLowerCase()}`
+              : `Waar organisaties in ${sector.title.toLowerCase()} tegenaan lopen`}
           </h2>
         </div>
 
@@ -123,7 +130,7 @@ export function SectorPage() {
 
               <div className="pt-4 border-t border-white/10 mt-auto">
                 <span className="text-[10px] font-bold uppercase tracking-wider text-rose-400 block mb-1">
-                  Financiële & Operationele Impact:
+                  {isEn ? 'Financial & Operational Impact:' : 'Financiële & Operationele Impact:'}
                 </span>
                 <span className="text-xs text-foreground/90 font-medium">
                   {challenge.impact}
@@ -134,19 +141,19 @@ export function SectorPage() {
         </div>
       </section>
 
-
-
       {/* Other Sectors Navigation */}
       <section className="px-4 max-w-7xl mx-auto py-16 border-t border-white/10">
         <div className="flex items-center justify-between mb-8">
-          <h3 className="text-xl font-bold text-white">Bekijk andere sectoren</h3>
+          <h3 className="text-xl font-bold text-white">
+            {isEn ? 'Explore other sectors' : 'Bekijk andere sectoren'}
+          </h3>
           <Link to="/#sectoren" className="text-xs font-bold uppercase tracking-wider text-primary hover:text-white transition-colors">
-            Alle sectoren bekijken →
+            {isEn ? 'View all sectors →' : 'Alle sectoren bekijken →'}
           </Link>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-          {SECTORS.filter((s) => s.id !== sector.id).slice(0, 5).map((other) => (
+          {sectorList.filter((s) => s.id !== sector.id).slice(0, 5).map((other) => (
             <Link
               key={other.id}
               to={`/sectoren/${other.slug}`}

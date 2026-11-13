@@ -3,11 +3,16 @@ import { HeroSection } from '@/components/HeroSection';
 import { IntroSection } from '@/components/IntroSection';
 import { AboutTeaserSection } from '@/components/AboutTeaserSection';
 import { FinalCtaSection } from '@/components/FinalCtaSection';
+import { useLanguage } from '@/lib/i18n';
 
 export function HomePage() {
+  const { isEn } = useLanguage();
+
   useEffect(() => {
-    document.title = 'VOSQ — Real Estate & Energy Intelligence Platform';
-  }, []);
+    document.title = isEn
+      ? 'VOSQ — Digital Real Estate & Energy Intelligence Platform'
+      : 'VOSQ — Real Estate & Energy Intelligence Platform';
+  }, [isEn]);
 
   return (
     <div>

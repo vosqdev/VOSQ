@@ -5,6 +5,7 @@
 
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { LanguageProvider } from '@/lib/i18n';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { CookieBanner } from '@/components/CookieBanner';
@@ -39,9 +40,10 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <div className="min-h-screen bg-background text-foreground selection:bg-primary/30 selection:text-primary-foreground flex flex-col justify-between">
+    <LanguageProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <div className="min-h-screen bg-background text-foreground selection:bg-primary/30 selection:text-primary-foreground flex flex-col justify-between">
         {/* Floating Navigation */}
         <Navbar />
 
@@ -83,7 +85,8 @@ export default function App() {
 
         {/* AVG-Proof Cookie Consent Banner */}
         <CookieBanner />
-      </div>
-    </BrowserRouter>
+        </div>
+      </BrowserRouter>
+    </LanguageProvider>
   );
 }

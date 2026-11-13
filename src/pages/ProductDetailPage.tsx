@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { motion } from 'motion/react';
 import { 
   Building2, 
   Zap, 
@@ -8,18 +7,17 @@ import {
   Users, 
   ShieldCheck, 
   TrendingUp, 
-  ArrowRight, 
   CheckCircle2, 
   AlertTriangle, 
   Sparkles, 
   ChevronRight, 
-  Layers,
   LayoutDashboard,
-  HelpCircle,
-  Activity
+  HelpCircle
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { PRODUCTS, ProductGroup } from '@/data/productsData';
+import { PRODUCTS } from '@/data/productsData';
+import { PRODUCTS_EN } from '@/data/productsDataEn';
+import { useLanguage } from '@/lib/i18n';
 
 const productIcons: Record<string, React.ReactNode> = {
   'vastgoedportefeuille-objectbeheer': <Building2 className="w-6 h-6 text-primary" />,
@@ -32,8 +30,10 @@ const productIcons: Record<string, React.ReactNode> = {
 
 export function ProductDetailPage() {
   const { productSlug } = useParams<{ productSlug: string }>();
+  const { isEn } = useLanguage();
 
-  const product = PRODUCTS.find((p) => p.slug === productSlug || p.id === productSlug);
+  const productList = isEn ? PRODUCTS_EN : PRODUCTS;
+  const product = productList.find((p) => p.slug === productSlug || p.id === productSlug);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -60,7 +60,7 @@ export function ProductDetailPage() {
           "@type": "Offer",
           "price": "0",
           "priceCurrency": "EUR",
-          "name": "Live Demonstratie"
+          "name": isEn ? "Live Demonstration" : "Live Demonstratie"
         }
       },
       {
@@ -93,7 +93,9 @@ export function ProductDetailPage() {
         <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground mb-6 relative z-10">
           <Link to="/" className="hover:text-primary transition-colors">Home</Link>
           <ChevronRight className="w-3 h-3" />
-          <Link to="/oplossingen" className="hover:text-primary transition-colors">Software</Link>
+          <Link to="/oplossingen" className="hover:text-primary transition-colors">
+            {isEn ? 'Solutions' : 'Software'}
+          </Link>
           <ChevronRight className="w-3 h-3" />
           <span className="text-white font-semibold">{product.title}</span>
         </div>
@@ -110,7 +112,9 @@ export function ProductDetailPage() {
 
           {/* Direct Definition Box for AI / Search Engines */}
           <div className="p-4 rounded-2xl liquid-glass border border-primary/20 bg-primary/5 text-sm text-foreground/90 leading-relaxed mb-8">
-            <strong className="text-primary block mb-1">Definitie & Functie:</strong>
+            <strong className="text-primary block mb-1">
+              {isEn ? 'Definition & Function:' : 'Definitie & Functie:'}
+            </strong>
             {product.definition}
           </div>
 
@@ -120,7 +124,7 @@ export function ProductDetailPage() {
         </div>
       </section>
 
-      {/* 1. Het Probleem */}
+      {/* 1. Market Problem */}
       <section className="px-4 max-w-7xl mx-auto py-16">
         <div className="liquid-glass rounded-3xl p-8 sm:p-12 border border-rose-500/20 bg-rose-500/5 relative">
           <div className="flex items-center gap-3 mb-6">
@@ -128,12 +132,12 @@ export function ProductDetailPage() {
               <AlertTriangle className="w-5 h-5" />
             </div>
             <span className="text-xs font-mono font-bold uppercase tracking-widest text-rose-400">
-              1. Het Probleem in de Markt
+              {isEn ? '1. The Market Challenge' : '1. Het Probleem in de Markt'}
             </span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-            Waarom traditioneel beheer vastloopt
+            {isEn ? 'Why traditional management hits limits' : 'Waarom traditioneel beheer vastloopt'}
           </h2>
 
           <p className="text-hero-sub text-base sm:text-lg leading-relaxed mb-6 text-foreground/90">
@@ -150,14 +154,16 @@ export function ProductDetailPage() {
         </div>
       </section>
 
-      {/* 2. De VOSQ Oplossing & Modules */}
+      {/* 2. VOSQ Solution & Modules */}
       <section className="px-4 max-w-7xl mx-auto py-16">
         <div className="mb-12">
           <span className="text-xs font-mono uppercase tracking-widest text-primary font-bold block mb-2">
-            2. De VOSQ Oplossing & Modules
+            {isEn ? '2. The VOSQ Solution & Modules' : '2. De VOSQ Oplossing & Modules'}
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-            Gestructureerde modules voor {product.title.toLowerCase()}
+            {isEn
+              ? `Structured modules for ${product.title.toLowerCase()}`
+              : `Gestructureerde modules voor ${product.title.toLowerCase()}`}
           </h2>
           <p className="text-muted-foreground text-base mt-2">
             {product.solution.summary}
@@ -181,7 +187,9 @@ export function ProductDetailPage() {
 
               {mod.kpi && (
                 <div className="p-3.5 rounded-xl bg-white/5 border border-white/5 mt-auto">
-                  <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Kwantitatieve KPI</div>
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
+                    {isEn ? 'Quantitative Indicator' : 'Kwantitatieve KPI'}
+                  </div>
                   <div className="text-xs font-bold text-primary mt-0.5">{mod.kpi}</div>
                 </div>
               )}
@@ -190,7 +198,7 @@ export function ProductDetailPage() {
         </div>
       </section>
 
-      {/* 3. Voorbeeld van het Dashboard */}
+      {/* 3. Dashboard Preview */}
       <section className="px-4 max-w-7xl mx-auto py-16">
         <div className="liquid-glass rounded-3xl p-8 sm:p-14 border border-white/10 relative overflow-hidden">
           <div className="flex items-center gap-3 mb-6">
@@ -198,12 +206,16 @@ export function ProductDetailPage() {
               <LayoutDashboard className="w-5 h-5" />
             </div>
             <span className="text-xs font-mono font-bold uppercase tracking-widest text-primary">
-              3. Voorbeeldweergave van het Dashboard (Indicatief)
+              {isEn
+                ? '3. Example Dashboard View (Indicative)'
+                : '3. Voorbeeldweergave van het Dashboard (Indicatief)'}
             </span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8 tracking-tight">
-            Hoe de {product.title} interface werkt
+            {isEn
+              ? `How the ${product.title} interface works`
+              : `Hoe de ${product.title} interface werkt`}
           </h2>
 
           {/* Top Panel Preview */}
@@ -248,15 +260,15 @@ export function ProductDetailPage() {
         </div>
       </section>
 
-      {/* 4. Veelgestelde Vragen (FAQ met Schema.org) */}
+      {/* 4. FAQ */}
       <section className="px-4 max-w-7xl mx-auto py-16">
         <div className="mb-10 text-center max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full liquid-glass border border-white/10 text-xs font-bold text-primary mb-3">
             <HelpCircle className="w-3.5 h-3.5" />
-            <span>VEELGESTELDE VRAGEN</span>
+            <span>{isEn ? 'FREQUENTLY ASKED QUESTIONS' : 'VEELGESTELDE VRAGEN'}</span>
           </div>
           <h2 className="text-3xl font-bold text-white">
-            Vragen over {product.title}
+            {isEn ? `Questions about ${product.title}` : `Vragen over ${product.title}`}
           </h2>
         </div>
 
@@ -270,14 +282,14 @@ export function ProductDetailPage() {
         </div>
       </section>
 
-      {/* 5. Call-to-Action (CTA) */}
+      {/* 5. CTA */}
       <section className="px-4 max-w-7xl mx-auto py-16">
         <div className="liquid-glass rounded-[2.5rem] p-10 sm:p-16 border border-white/10 text-center relative overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary/10 blur-[150px] rounded-full pointer-events-none mix-blend-screen" />
           
           <div className="relative z-10 max-w-2xl mx-auto">
             <span className="text-xs font-mono uppercase tracking-widest text-primary font-bold block mb-3">
-              4. Call-to-Action
+              {isEn ? '4. Call-to-Action' : '4. Call-to-Action'}
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               {product.cta.headline}
@@ -302,7 +314,7 @@ export function ProductDetailPage() {
                   size="lg"
                   className="h-14 px-8 text-base border border-white/10"
                 >
-                  Contact opnemen
+                  {isEn ? 'Get in touch' : 'Contact opnemen'}
                 </Button>
               </Link>
             </div>
@@ -318,14 +330,16 @@ export function ProductDetailPage() {
       {/* Switch between other products */}
       <section className="px-4 max-w-7xl mx-auto py-12 border-t border-white/10">
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-lg font-bold text-white">Bekijk andere softwaremodules</h3>
+          <h3 className="text-lg font-bold text-white">
+            {isEn ? 'Explore other software modules' : 'Bekijk andere softwaremodules'}
+          </h3>
           <Link to="/oplossingen" className="text-xs font-bold uppercase tracking-wider text-primary hover:text-white transition-colors">
-            Alle modules bekijken →
+            {isEn ? 'View all modules →' : 'Alle modules bekijken →'}
           </Link>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-          {PRODUCTS.filter((p) => p.id !== product.id).map((other) => (
+          {productList.filter((p) => p.id !== product.id).map((other) => (
             <Link
               key={other.id}
               to={`/producten/${other.slug}`}

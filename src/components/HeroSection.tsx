@@ -3,10 +3,12 @@ import { ArrowRight, Sparkles, Database, Zap, Building2, ShieldCheck } from 'luc
 import { Button } from '@/components/ui/button';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '@/lib/i18n';
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
 export function HeroSection() {
+  const { isEn } = useLanguage();
 
   return (
     <section className="relative min-h-[92vh] flex flex-col justify-center overflow-hidden pt-28 pb-16">
@@ -47,9 +49,11 @@ export function HeroSection() {
           transition={{ duration: 1, ease, delay: 0.25 }}
           className="text-3xl sm:text-5xl lg:text-[3.75rem] font-bold leading-[1.1] tracking-tighter max-w-5xl"
         >
-          <span className="text-white drop-shadow-sm">De vastgoed- en energiewereld</span><br />
+          <span className="text-white drop-shadow-sm">
+            {isEn ? 'The real estate and energy world' : 'De vastgoed- en energiewereld'}
+          </span><br />
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary/95 to-primary/70 drop-shadow-[0_0_35px_rgba(121,242,194,0.35)]">
-            staan voor fundamentele veranderingen.
+            {isEn ? 'is facing fundamental change.' : 'staan voor fundamentele veranderingen.'}
           </span>
         </motion.h1>
 
@@ -60,8 +64,14 @@ export function HeroSection() {
           transition={{ duration: 0.8, ease, delay: 0.35 }}
           className="text-hero-sub text-lg sm:text-xl max-w-3xl mt-6 opacity-95 font-medium leading-relaxed"
         >
-          VOSQ helpt vastgoedeigenaren, beleggers en ondernemers in:{' '}
-          <span className="text-white font-semibold">Meer inzicht. Betere beslissingen. Hoger rendement.</span>
+          {isEn
+            ? 'VOSQ supports property owners, investors, and businesses with: '
+            : 'VOSQ helpt vastgoedeigenaren, beleggers en ondernemers in: '}
+          <span className="text-white font-semibold">
+            {isEn
+              ? 'More insight. Better decisions. Higher returns.'
+              : 'Meer inzicht. Betere beslissingen. Hoger rendement.'}
+          </span>
         </motion.p>
 
         {/* CTA Knoppen: Primair (lime, gevuld) & Secundair (omlijnd) */}
@@ -77,7 +87,7 @@ export function HeroSection() {
               className="w-full sm:w-auto h-14 px-8 text-base font-bold shadow-[0_0_30px_rgba(121,242,194,0.3)] hover:shadow-[0_0_45px_rgba(121,242,194,0.5)] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
             >
               <Sparkles className="w-4 h-4 mr-2" />
-              Ontdek uw vastgoedkansen
+              {isEn ? 'Discover your property opportunities' : 'Ontdek uw vastgoedkansen'}
             </Button>
           </Link>
 
@@ -86,7 +96,7 @@ export function HeroSection() {
               variant="heroSecondary" 
               className="w-full sm:w-auto h-14 px-8 text-base border border-white/10 hover:bg-white/10 hover:-translate-y-0.5 transition-all duration-300"
             >
-              Bekijk de mogelijkheden
+              {isEn ? 'Explore the possibilities' : 'Bekijk de mogelijkheden'}
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </Link>
@@ -104,8 +114,10 @@ export function HeroSection() {
               <Zap className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-xs font-bold text-white uppercase tracking-wider">Energie & Netcapaciteit</div>
-              <div className="text-[11px] text-muted-foreground">CBC, GTV & peak shaving</div>
+              <div className="text-xs font-bold text-white uppercase tracking-wider">
+                {isEn ? 'Energy & Grid Capacity' : 'Energie & Netcapaciteit'}
+              </div>
+              <div className="text-[11px] text-muted-foreground">CBC, GTV &amp; peak shaving</div>
             </div>
           </div>
 
@@ -114,8 +126,12 @@ export function HeroSection() {
               <Building2 className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-xs font-bold text-white uppercase tracking-wider">Vastgoed & Waarde</div>
-              <div className="text-[11px] text-muted-foreground">Paris Proof, CSRD & MJOP</div>
+              <div className="text-xs font-bold text-white uppercase tracking-wider">
+                {isEn ? 'Real Estate & Value' : 'Vastgoed & Waarde'}
+              </div>
+              <div className="text-[11px] text-muted-foreground">
+                {isEn ? 'Paris Proof, CSRD & LTMP' : 'Paris Proof, CSRD & MJOP'}
+              </div>
             </div>
           </div>
 
@@ -124,8 +140,12 @@ export function HeroSection() {
               <Database className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-xs font-bold text-white uppercase tracking-wider">Object & data</div>
-              <div className="text-[11px] text-muted-foreground">Geautomatiseerde koppeling</div>
+              <div className="text-xs font-bold text-white uppercase tracking-wider">
+                {isEn ? 'Asset & Data' : 'Object & data'}
+              </div>
+              <div className="text-[11px] text-muted-foreground">
+                {isEn ? 'Automated integration' : 'Geautomatiseerde koppeling'}
+              </div>
             </div>
           </div>
 
@@ -134,8 +154,12 @@ export function HeroSection() {
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-xs font-bold text-white uppercase tracking-wider">Praktisch Instrument</div>
-              <div className="text-[11px] text-muted-foreground">Zelfstandig inzicht & analyse</div>
+              <div className="text-xs font-bold text-white uppercase tracking-wider">
+                {isEn ? 'Practical Instrument' : 'Praktisch Instrument'}
+              </div>
+              <div className="text-[11px] text-muted-foreground">
+                {isEn ? 'Independent insight & analysis' : 'Zelfstandig inzicht & analyse'}
+              </div>
             </div>
           </div>
         </motion.div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Send, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/lib/i18n';
 
 export function ContactPage() {
   const [name, setName] = useState('');
@@ -11,11 +12,14 @@ export function ContactPage() {
   const [message, setMessage] = useState('');
   const [botField, setBotField] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const { isEn } = useLanguage();
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = 'Contact & Aanvraag | VOSQ Platform';
-  }, []);
+    document.title = isEn
+      ? 'Contact & Inquiry | VOSQ Platform'
+      : 'Contact & Aanvraag | VOSQ Platform';
+  }, [isEn]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -54,33 +58,39 @@ export function ContactPage() {
 
         <div className="relative z-10 max-w-3xl mx-auto">
           <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6">
-            Neem Contact op
+            {isEn ? 'Get in Touch' : 'Neem Contact op'}
           </h1>
 
           <p className="text-hero-sub text-lg sm:text-xl font-normal leading-relaxed opacity-90">
-            Ontdek hoe VOSQ uw vastgoed, energieaansluiting, contracten en investeringsvraagstukken overzichtelijk structureert en doorrekent.
+            {isEn
+              ? 'Discover how VOSQ clearly structures and calculates your real estate, grid connection, contracts, and investment challenges.'
+              : 'Ontdek hoe VOSQ uw vastgoed, energieaansluiting, contracten en investeringsvraagstukken overzichtelijk structureert en doorrekent.'}
           </p>
         </div>
       </section>
 
       <section className="px-4 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-12 items-start">
-          {/* Left Column: Digitaal Instrument — Zelfstandig Regie */}
+          {/* Left Column: Digital Instrument — Independent Governance */}
           <div className="lg:col-span-5 space-y-6">
             <div className="liquid-glass rounded-3xl p-8 sm:p-10 border border-primary/25 bg-gradient-to-b from-primary/[0.08] via-white/[0.02] to-transparent shadow-xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-xs font-mono font-bold text-primary uppercase tracking-wider mb-6">
-                Positionering
+                {isEn ? 'Positioning' : 'Positionering'}
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 tracking-tight leading-snug">
-                Praktisch Instrument — Zelfstandig Regie
+                {isEn
+                  ? 'Practical Instrument — Independent Control'
+                  : 'Praktisch Instrument — Zelfstandig Regie'}
               </h2>
               <p className="text-hero-sub text-base sm:text-lg leading-relaxed opacity-90 text-white/90">
-                VOSQ is een digitaal platform en geen traditioneel adviesbureau. U krijgt overzicht en gestructureerde datakoppelingen om zelfstandig kansen, risico's en scenario's te verkennen.
+                {isEn
+                  ? 'VOSQ is a digital platform and not a traditional consultancy. You gain clarity and structured data connections to independently explore opportunities, risks, and scenarios.'
+                  : 'VOSQ is een digitaal platform en geen traditioneel adviesbureau. U krijgt overzicht en gestructureerde datakoppelingen om zelfstandig kansen, risico\'s en scenario\'s te verkennen.'}
               </p>
             </div>
           </div>
 
-          {/* Right Column: Contact & Kennismaking Form */}
+          {/* Right Column: Contact & Introduction Form */}
           <div className="lg:col-span-7">
             <div className="liquid-glass rounded-3xl p-8 sm:p-12 border border-white/10">
               {submitted ? (
@@ -88,12 +98,24 @@ export function ContactPage() {
                   <div className="w-16 h-16 rounded-2xl bg-primary/20 text-primary flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(121,242,194,0.35)]">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Aanvraag Verzonden</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {isEn ? 'Inquiry Sent' : 'Aanvraag Verzonden'}
+                  </h3>
                   <p className="text-muted-foreground text-sm max-w-md mb-8">
-                    Bedankt {name}. We nemen zo spoedig mogelijk contact met u op via <span className="text-primary font-medium">{email}</span> om uw vraag te bespreken.
+                    {isEn ? (
+                      <>
+                        Thank you, {name}. We will contact you shortly at{' '}
+                        <span className="text-primary font-medium">{email}</span> to discuss your inquiry.
+                      </>
+                    ) : (
+                      <>
+                        Bedankt {name}. We nemen zo spoedig mogelijk contact met u op via{' '}
+                        <span className="text-primary font-medium">{email}</span> om uw vraag te bespreken.
+                      </>
+                    )}
                   </p>
                   <Button variant="hero" onClick={() => setSubmitted(false)}>
-                    Nieuw bericht sturen
+                    {isEn ? 'Send another message' : 'Nieuw bericht sturen'}
                   </Button>
                 </div>
               ) : (
@@ -117,37 +139,43 @@ export function ContactPage() {
                     </label>
                   </p>
                   <div className="border-b border-white/10 pb-4 mb-2">
-                    <h3 className="text-2xl font-bold text-white mb-1.5">Plan een Vrijblijvende Kennismaking</h3>
+                    <h3 className="text-2xl font-bold text-white mb-1.5">
+                      {isEn
+                        ? 'Schedule a No-Obligation Introduction'
+                        : 'Plan een Vrijblijvende Kennismaking'}
+                    </h3>
                     <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                      Ontdek hoe VOSQ uw vastgoed, energieaansluiting en contracten overzichtelijk structureert en inzichtelijk maakt.
+                      {isEn
+                        ? 'Discover how VOSQ clearly structures and visualizes your real estate, energy connection, and contracts.'
+                        : 'Ontdek hoe VOSQ uw vastgoed, energieaansluiting en contracten overzichtelijk structureert en inzichtelijk maakt.'}
                     </p>
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1.5">
-                        Naam *
+                        {isEn ? 'Name *' : 'Naam *'}
                       </label>
                       <input
                         type="text"
                         required
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        placeholder="Voor- en achternaam"
+                        placeholder={isEn ? 'First and last name' : 'Voor- en achternaam'}
                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/50 transition-colors"
                       />
                     </div>
 
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1.5">
-                        Zakelijk E-mailadres *
+                        {isEn ? 'Business Email Address *' : 'Zakelijk E-mailadres *'}
                       </label>
                       <input
                         type="email"
                         required
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        placeholder="naam@organisatie.nl"
+                        placeholder={isEn ? 'name@organization.com' : 'naam@organisatie.nl'}
                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/50 transition-colors"
                       />
                     </div>
@@ -156,20 +184,20 @@ export function ContactPage() {
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1.5">
-                        Bedrijfsnaam / Organisatie
+                        {isEn ? 'Company / Organization' : 'Bedrijfsnaam / Organisatie'}
                       </label>
                       <input
                         type="text"
                         value={company}
                         onChange={(e) => setCompany(e.target.value)}
-                        placeholder="bijv. Bouwgroep of Asset Management"
+                        placeholder={isEn ? 'e.g. Real Estate Fund or Asset Management' : 'bijv. Bouwgroep of Asset Management'}
                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/50 transition-colors"
                       />
                     </div>
 
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1.5">
-                        Telefoonnummer
+                        {isEn ? 'Phone Number' : 'Telefoonnummer'}
                       </label>
                       <input
                         type="tel"
@@ -183,38 +211,56 @@ export function ContactPage() {
 
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1.5">
-                      Sector / Toepassing
+                      {isEn ? 'Sector / Application' : 'Sector / Toepassing'}
                     </label>
                     <select
                       value={sector}
                       onChange={(e) => setSector(e.target.value)}
                       className="w-full bg-card border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-primary/50 transition-colors"
                     >
-                      <option value="netcongestie">Energie & Netcongestie</option>
-                      <option value="woningbouw">Woningbouw & Gebiedsontwikkeling</option>
-                      <option value="commercieel">Commercieel Vastgoed & Investeringen</option>
-                      <option value="bess">Batterijopslag (BESS) & Flexibiliteit</option>
-                      <option value="opwek">Duurzame Energie Opwek & Smart Grids</option>
-                      <option value="overheden">Overheden & Maatschappelijk Vastgoed</option>
+                      <option value="netcongestie">
+                        {isEn ? 'Energy & Grid Congestion' : 'Energie & Netcongestie'}
+                      </option>
+                      <option value="woningbouw">
+                        {isEn ? 'Residential & Area Development' : 'Woningbouw & Gebiedsontwikkeling'}
+                      </option>
+                      <option value="commercieel">
+                        {isEn ? 'Commercial Real Estate & Investments' : 'Commercieel Vastgoed & Investeringen'}
+                      </option>
+                      <option value="bess">
+                        {isEn ? 'Battery Storage (BESS) & Flexibility' : 'Batterijopslag (BESS) & Flexibiliteit'}
+                      </option>
+                      <option value="opwek">
+                        {isEn ? 'Renewable Energy Generation & Smart Grids' : 'Duurzame Energie Opwek & Smart Grids'}
+                      </option>
+                      <option value="overheden">
+                        {isEn ? 'Public Sector & Social Real Estate' : 'Overheden & Maatschappelijk Vastgoed'}
+                      </option>
                     </select>
                   </div>
 
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1.5">
-                      Bericht of Toelichting op uw vraagstuk (Optioneel)
+                      {isEn
+                        ? 'Message or Context on Your Challenge (Optional)'
+                        : 'Bericht of Toelichting op uw vraagstuk (Optioneel)'}
                     </label>
                     <textarea
                       rows={4}
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
-                      placeholder="Vertel ons over uw project, netaansluiting of portefeuille..."
+                      placeholder={
+                        isEn
+                          ? 'Tell us about your project, grid connection, or portfolio...'
+                          : 'Vertel ons over uw project, netaansluiting of portefeuille...'
+                      }
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/50 transition-colors resize-none"
                     />
                   </div>
 
                   <Button variant="hero" type="submit" className="w-full h-14 text-sm font-bold gap-2">
                     <Send className="w-4 h-4" />
-                    Verstuur Aanvraag
+                    {isEn ? 'Send Inquiry' : 'Verstuur Aanvraag'}
                   </Button>
                 </form>
               )}

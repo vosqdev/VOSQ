@@ -3,45 +3,85 @@ import { motion } from 'motion/react';
 import { Database, FolderTree, LineChart, CheckCircle2, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '@/lib/i18n';
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
-const HOW_IT_WORKS_STEPS = [
-  {
-    step: '01',
-    kicker: 'DATA-INGESTIE',
-    title: 'Connect',
-    description: 'Automatisch uploaden van informatie: BAG, slimme meters, contracten en netbeheerdersdata.',
-    tag: 'TELEMETRIE',
-    icon: Database,
-  },
-  {
-    step: '02',
-    kicker: 'HARMONISATIE',
-    title: 'Structure',
-    description: 'Versnipperde spreadsheets en documenten worden geordend in één uniform en gevalideerd objectdossier.',
-    tag: 'EÉN BRON VAN INFORMATIE',
-    icon: FolderTree,
-  },
-  {
-    step: '03',
-    kicker: 'SIMULATIE',
-    title: 'Analyse',
-    description: 'Modellering van energie zoals kwartierdata, transportcapaciteit, BESS-batterijopslag, laadpalen en ESG-doelen.',
-    tag: 'ENERGIEWAARDE',
-    icon: LineChart,
-  },
-  {
-    step: '04',
-    kicker: 'BESLUITVORMING',
-    title: 'Decide',
-    description: 'Inspecties, controles, investerings-, verkoop- en exploitatiecontracten met gestructureerde inzichten en scenariovergelijkingen.',
-    tag: 'ONDERBOUWDE BESLUITVORMING',
-    icon: CheckCircle2,
-  },
-];
+const HOW_IT_WORKS_STEPS = {
+  nl: [
+    {
+      step: '01',
+      kicker: 'DATA-INGESTIE',
+      title: 'Connect',
+      description: 'Automatisch uploaden van informatie: BAG, slimme meters, contracten en netbeheerdersdata.',
+      tag: 'TELEMETRIE',
+      icon: Database,
+    },
+    {
+      step: '02',
+      kicker: 'HARMONISATIE',
+      title: 'Structure',
+      description: 'Versnipperde spreadsheets en documenten worden geordend in één uniform en gevalideerd objectdossier.',
+      tag: 'EÉN BRON VAN INFORMATIE',
+      icon: FolderTree,
+    },
+    {
+      step: '03',
+      kicker: 'SIMULATIE',
+      title: 'Analyse',
+      description: 'Modellering van energie zoals kwartierdata, transportcapaciteit, BESS-batterijopslag, laadpalen en ESG-doelen.',
+      tag: 'ENERGIEWAARDE',
+      icon: LineChart,
+    },
+    {
+      step: '04',
+      kicker: 'BESLUITVORMING',
+      title: 'Decide',
+      description: 'Inspecties, controles, investerings-, verkoop- en exploitatiecontracten met gestructureerde inzichten en scenariovergelijkingen.',
+      tag: 'ONDERBOUWDE BESLUITVORMING',
+      icon: CheckCircle2,
+    },
+  ],
+  en: [
+    {
+      step: '01',
+      kicker: 'DATA INGESTION',
+      title: 'Connect',
+      description: 'Automated upload of information: public property registers, smart meters, contracts, and grid operator data.',
+      tag: 'TELEMETRY',
+      icon: Database,
+    },
+    {
+      step: '02',
+      kicker: 'HARMONIZATION',
+      title: 'Structure',
+      description: 'Fragmented spreadsheets and documents are organized into one uniform and validated asset dossier.',
+      tag: 'SINGLE SOURCE OF INFORMATION',
+      icon: FolderTree,
+    },
+    {
+      step: '03',
+      kicker: 'SIMULATION',
+      title: 'Analyse',
+      description: 'Modeling of energy including quarter-hour data, transport capacity, BESS battery storage, EV charging, and ESG goals.',
+      tag: 'ENERGY VALUE',
+      icon: LineChart,
+    },
+    {
+      step: '04',
+      kicker: 'DECISION-MAKING',
+      title: 'Decide',
+      description: 'Inspections, audits, investment, disposal, and operating contracts backed by structured insights and scenario comparisons.',
+      tag: 'EVIDENCE-BASED DECISIONS',
+      icon: CheckCircle2,
+    },
+  ],
+};
 
 export function AboutTeaserSection() {
+  const { lang, isEn } = useLanguage();
+  const steps = HOW_IT_WORKS_STEPS[lang];
+
   return (
     <section className="py-24 px-4 max-w-7xl mx-auto relative">
       <div className="liquid-glass rounded-3xl p-8 sm:p-12 lg:p-14 border border-white/10 shadow-2xl relative overflow-hidden">
@@ -64,7 +104,7 @@ export function AboutTeaserSection() {
         <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-primary/10 blur-[160px] rounded-full pointer-events-none mix-blend-screen" />
 
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center relative z-10">
-          {/* Left Column: Logo, Mission & CTAs matching Image 1 */}
+          {/* Left Column: Logo, Mission & CTA */}
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
               <div className="mb-6">
@@ -77,10 +117,14 @@ export function AboutTeaserSection() {
 
               <div className="space-y-4 mb-8 text-hero-sub text-base sm:text-lg font-normal leading-relaxed opacity-95 text-white/95">
                 <p>
-                  Met de juiste tools de financiële, technische en energetische prestaties van het vastgoed te verbeteren. Van energiekosten en netcapaciteit tot verduurzaming, investeringsscenario's en toekomstwaarde.
+                  {isEn
+                    ? 'Using the right tools to improve the financial, technical, and energy performance of real estate. From energy costs and grid capacity to sustainability, investment scenarios, and future value.'
+                    : 'Met de juiste tools de financiële, technische en energetische prestaties van het vastgoed te verbeteren. Van energiekosten en netcapaciteit tot verduurzaming, investeringsscenario\'s en toekomstwaarde.'}
                 </p>
                 <p>
-                  VOSQ combineert kennis van vastgoed, energie en digitale technologie om complexe vraagstukken te vertalen naar concrete inzichten om onderbouwde keuzes te maken — met uw eigen contracten en actuele data als vertrekpunt.
+                  {isEn
+                    ? 'VOSQ combines knowledge of real estate, energy, and digital technology to translate complex challenges into concrete insights for well-founded decisions — starting from your own contracts and current data.'
+                    : 'VOSQ combineert kennis van vastgoed, energie en digitale technologie om complexe vraagstukken te vertalen naar concrete inzichten om onderbouwde keuzes te maken — met uw eigen contracten en actuele data als vertrekpunt.'}
                 </p>
               </div>
             </div>
@@ -88,7 +132,7 @@ export function AboutTeaserSection() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <Link to="/over-vosq" className="w-full sm:w-auto">
                 <Button variant="hero" className="w-full sm:w-auto h-12 px-6 text-sm font-bold shadow-[0_0_25px_rgba(121,242,194,0.3)]">
-                  Ontdek het verhaal achter VOSQ
+                  {isEn ? 'Discover the story behind VOSQ' : 'Ontdek het verhaal achter VOSQ'}
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
@@ -97,7 +141,7 @@ export function AboutTeaserSection() {
 
           {/* Right Column: 4 How It Works blocks in 2x2 grid */}
           <div className="lg:col-span-7 grid sm:grid-cols-2 gap-4 sm:gap-5">
-            {HOW_IT_WORKS_STEPS.map((step, idx) => {
+            {steps.map((step, idx) => {
               const Icon = step.icon;
               return (
                 <motion.div
